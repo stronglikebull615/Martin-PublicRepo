@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Wall Inward — field manual</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Nunito:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+html { scroll-behavior: smooth; background: #05100a; }
+body { margin: 0; background: #05100a; color: #e6efe9; -webkit-font-smoothing: antialiased; }
+::selection { background: rgba(61,205,88,0.28); }
+a { color: #3dcd58; text-decoration: none; }
+a:hover { color: #7fe295; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #05100a; }
+::-webkit-scrollbar-thumb { background: #1e3a2a; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #2c5a3d; }
+table.plate { border-collapse: collapse; width: 100%; }
+table.plate th { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; text-align: left; font-weight: 500; padding: 0 16px 12px 0; border-bottom: 1px solid rgba(61,205,88,0.3); }
+table.plate td { font-size: 14px; line-height: 1.5; color: #cddbd2; vertical-align: top; padding: 13px 16px 13px 0; border-bottom: 1px solid rgba(230,239,233,0.09); }
+table.plate td b { color: #e6efe9; font-weight: 700; }
+table.plate tr:last-child td { border-bottom: 0; }
+h1, h2, h3, h4 { font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin: 0 0 8px; }
+h1 { font-weight: 800; color: #3dcd58; }
+figure { margin: 0; }
+img { display: block; max-width: 100%; }
+p { margin: 0 0 10px; }
+</style>
+</helmet>
+
+<div style="background: #05100a; color: #e6efe9; font-family: Nunito, system-ui, sans-serif; padding: 0 40px 96px;">
+
+<div style="position: fixed; top: 0; right: 0; z-index: 50; padding: 22px 26px 20px 34px; background: linear-gradient(200deg, rgba(5,16,10,0.96) 42%, rgba(5,16,10,0));">
+  <img src="schneider-electric-green.png" alt="Schneider Electric" style="display: block; height: 26px; width: auto;">
+</div>
+
+<header data-narr="0" data-screen-label="Masthead" style="max-width: 1180px; margin: 0 auto; padding: 72px 0 0;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #3dcd58; margin-bottom: 18px;">Ramp packet · Colocation &amp; Service Providers · Figure set</div>
+  <h1 style="font-size: 62px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 22ch;">Wall Inward: <span style="color: #ffffff;">everything between the utility and the chip</span></h1>
+  <p style="font-size: 19px; line-height: 1.55; max-width: 62ch; margin: 0 0 34px; color: #8fa398;">Eleven figures from the field manual, in document order. What the equipment is, what it does, why it costs what it costs, and where a strategic account executive actually changes the outcome.</p>
+
+  <sc-if value="{{ narrOn }}" hint-placeholder-val="{{ true }}">
+  <div style="display: flex; align-items: center; gap: 14px; margin: 0 0 32px;">
+    <button type="button" onClick="{{ play0 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #05100a; background: #3dcd58; border: 0; padding: 12px 18px; cursor: pointer;" style-hover="background: #7fe295;">Play narration from the top</button>
+    <span style="font-size: 13px; color: #5c7367; max-width: 34ch; line-height: 1.45;">Fourteen minutes of narration across fifteen sections. Use the Listen button on any section to jump straight to it.</span>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showKeystrip }}" hint-placeholder-val="{{ true }}">
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin: 0 0 30px;">
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 16px 14px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5c7367; margin-bottom: 6px;">The scope</div>
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; line-height: 1.1;">MV switchgear → rack</div>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 16px 14px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5c7367; margin-bottom: 6px;">Two flows</div>
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; line-height: 1.1;"><span style="color: #3dcd58;">Electrons in</span> · <span style="color: #4fc7d4;">heat out</span></div>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 16px 14px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5c7367; margin-bottom: 6px;">Biggest line</div>
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; line-height: 1.1; color: #3dcd58;">UPS &amp; battery, 19.5%</div>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 16px 14px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5c7367; margin-bottom: 6px;">Fastest-growing</div>
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; line-height: 1.1; color: #4fc7d4;">Liquid cooling, 13.7%</div>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 16px 14px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5c7367; margin-bottom: 6px;">The real gate</div>
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 21px; line-height: 1.1;">Order date, not build date</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; border-top: 1px solid rgba(230,239,233,0.14); padding-top: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #5c7367;">Colour carries meaning</div>
+    <div style="display: flex; align-items: center; gap: 9px;">
+      <span style="width: 26px; height: 12px; background: #123521; border: 1.5px solid #3dcd58; display: block;"></span>
+      <span style="font-size: 14px;">Green is power</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 9px;">
+      <span style="width: 26px; height: 12px; background: #0f2b31; border: 1.5px solid #4fc7d4; display: block;"></span>
+      <span style="font-size: 14px;">Cyan is cooling</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 9px;">
+      <span style="width: 26px; height: 12px; background: transparent; border: 1.2px dashed #5c7367; display: block;"></span>
+      <span style="font-size: 14px;">Dashed is outside scope</span>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part I · Orientation</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Start here</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">Read this section even if you skip everything else. It is the mental model the rest of the packet hangs on.</p>
+</div>
+</sc-if>
+
+<section data-narr="1" data-screen-label="01 Scope boundary" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">01</div>
+    <h2 style="font-size: 34px; margin: 0;">The boundary: what's yours and what isn't</h2>
+    <button type="button" onClick="{{ play1 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">The single most useful thing to get right early is where your scope starts and stops. Get this wrong in a meeting and you will either claim something you can't deliver or concede something you own.</p>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="01-scope-boundary.svg" alt="Scope diagram: the utility feed and generators sit outside the wall-inward scope; MV switchgear through rack sits inside; the chilled water plant and the IT equipment sit outside." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>The dashed boxes are the argument.</b> The utility feed, the generators, the IT equipment and — critically — the chilled water plant sit outside what this group sells. The plant is the one people get wrong: it's roughly $450k per megawatt of real money, it usually sits outside the building envelope, and the financial model explicitly excludes it. Agree that boundary early in any commercial conversation.</figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 26px; padding: 22px 24px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 14px;">The four boundary traps</div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 34px;">
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>Generators.</strong> Schneider sells the switchgear, paralleling controls and transfer switches around them, not the engines. Those are Caterpillar, Cummins, Rolls-Royce mtu. Don't claim the engine.</p>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>Chilled water plant.</strong> Chillers, pumps, cooling towers. Schneider does play here through Uniflair, but in the wall-inward framing it's out — and the model excludes it. Know which conversation you're in.</p>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>The utility side.</strong> Interconnection queues, substation build, grid capacity. Enormous strategic topic for Equinix, largely not your product — but it's the thing keeping their executives awake, so be able to discuss it intelligently without pretending to sell it.</p>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>The IT equipment.</strong> Your old world. Now the customer's customer's problem. Its <em>power draw and heat profile</em> are very much your problem.</p>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part II · The power path</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Electrons in</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">One continuous chain from the property line to the server's power supply. Nine stages. Learn them in order and the vocabulary organizes itself.</p>
+</div>
+</sc-if>
+
+<section data-narr="2" data-screen-label="02 Power one-line" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">02</div>
+    <h2 style="font-size: 34px; margin: 0;">The one-line diagram</h2>
+    <button type="button" onClick="{{ play2 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">A <strong>one-line</strong> (or single-line) diagram is the drawing every electrical conversation happens over. It collapses three-phase power into a single line and shows the sequence of protection and transformation from source to load. If you learn to read one document in this job, make it this one.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">Below is the canonical data center one-line, simplified to the level you need. Read it left to right: voltage steps down, and the number of paths multiplies.</p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="02-power-one-line.svg" alt="Single-line diagram from utility medium voltage through MV switchgear, transformer, generator transfer, low-voltage switchgear, UPS and battery, busway and PDU, to dual-corded rack loads on independent A and B paths." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Two complete, independent paths from two utility feeds to one dual-corded rack.</b> That is 2N, and it's the topology most Equinix critical load runs on. The generator is the only shared element, and it backs both sides. Notice that the voltage steps down once (MV to LV) and the path count never merges again after the source — that separation <em>is</em> the resilience. The dashed line along the bottom is the monitoring layer, which touches every stage and is where the recurring revenue lives.</figcaption>
+  </figure>
+  <h3 style="font-size: 24px; margin: 34px 0 14px;">Stage by stage — what each box does and what Schneider calls it</h3>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px; overflow-x: auto;">
+    <table class="plate">
+      <thead>
+        <tr>
+          <th style="width: 16%;">Stage</th>
+          <th style="width: 34%;">What it actually does</th>
+          <th style="width: 28%;">Schneider / APC lines</th>
+          <th style="width: 22%;">What to listen for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>MV switchgear</b></td>
+          <td>Receives the utility feed at 11–35 kV. Protects, isolates and sectionalizes the MV bus so a fault on one section doesn't take the building. Ring-main units let you feed from two directions.</td>
+          <td style="color: #3dcd58;">Premset, SM6, GM-series metal-clad, EvoPacT breakers</td>
+          <td>"Ring main", "metal-clad vs metal-enclosed", "arc-flash rating", SF6 vs shielded-solid-insulation</td>
+        </tr>
+        <tr>
+          <td><b>Transformer</b></td>
+          <td>Steps MV down to usable 400 V (Europe/APAC) or 480 V (Americas). Cast-resin dry types dominate indoors — no oil, so no fire suppression and containment burden.</td>
+          <td style="color: #3dcd58;">Trihal (cast resin), Minera (oil-filled)</td>
+          <td>"Dry-type vs oil", "k-factor", "no-load losses", and above all <b>lead time</b> — this is the longest-lead item on the job</td>
+        </tr>
+        <tr>
+          <td><b>Generator + transfer</b></td>
+          <td>Backs the whole building on utility loss. Schneider supplies the paralleling switchgear, ATS and controls; another vendor supplies the engine.</td>
+          <td style="color: #3dcd58;">ASCO-class transfer gear, paralleling switchgear, controls</td>
+          <td>"ATS vs closed transition", "black building test", "N+1 gen"</td>
+        </tr>
+        <tr>
+          <td><b>LV switchgear</b></td>
+          <td>The main low-voltage distribution board. Air circuit breakers on the big feeds, molded-case downstream. Everything after this is 400/480 V.</td>
+          <td style="color: #3dcd58;">Masterpact MTZ (ACB), ComPacT / PowerPacT (MCCB), Blokset, Okken</td>
+          <td>"Form 4b separation", "selectivity / discrimination", "withdrawable"</td>
+        </tr>
+        <tr>
+          <td><b>UPS + battery</b></td>
+          <td>Bridges the seconds between utility loss and generator pickup, and conditions power continuously. <b>The single biggest line item in the stack.</b></td>
+          <td style="color: #3dcd58;">Galaxy VX (large), Galaxy VL, Galaxy VS; VRLA or Li-ion strings</td>
+          <td>"Double conversion vs eco-mode", "runtime", "Li-ion vs VRLA", "modular / scalable"</td>
+        </tr>
+        <tr>
+          <td><b>Busway / PDU / RPP</b></td>
+          <td>Gets power across the hall and down to the rack. Overhead busway lets you tap power anywhere along its length — which matters enormously when rack densities keep changing.</td>
+          <td style="color: #3dcd58;">Canalis busway, EcoStruxure busway, PDUs and remote power panels</td>
+          <td>"Busway vs whips", "tap-off box", "RPP has no transformer, a PDU does"</td>
+        </tr>
+        <tr>
+          <td><b>Rack PDU</b></td>
+          <td>The strip inside the cabinet. Metered, switched, or outlet-metered — and the metering is what lets a colo bill for power accurately.</td>
+          <td style="color: #3dcd58;">APC rack PDUs (metered / switched / outlet-metered)</td>
+          <td>"Per-outlet metering", "3-phase rPDU", "billing-grade accuracy"</td>
+        </tr>
+        <tr>
+          <td><b>Rack + containment</b></td>
+          <td>The cabinet and the hot/cold aisle separation around it. Smallest dollar line, but it's where airflow discipline is won or lost.</td>
+          <td style="color: #3dcd58;">APC NetShelter, hot/cold aisle containment systems</td>
+          <td>"Containment", "blanking panels", "bypass air"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 22px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The product names</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">Use these to <em>recognize</em> what someone says to you, not to recite. Portfolios get renamed, regional naming differs (US metal-clad naming in particular), and being corrected on your own employer's product line is a bad look. Confirm the current lineup with your sales engineer in week one — then you own it.</p>
+  </div>
+</section>
+
+<section data-narr="3" data-screen-label="03 Redundancy topologies" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">03</div>
+    <h2 style="font-size: 34px; margin: 0;">Redundancy: the concept that sets the price</h2>
+    <button type="button" onClick="{{ play3 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">This is the highest-leverage concept in the packet. <strong>Topology is the single biggest determinant of how much equipment a megawatt needs</strong> — and therefore of what that megawatt is worth to Schneider. Two facilities with identical IT load can differ by nearly double in electrical content depending on how they're configured.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">The notation is simple once you see it drawn. N is exactly what the load requires and nothing more.</p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="03-redundancy-topologies.svg" alt="Comparison of N, N+1 and 2N redundancy topologies showing how many UPS modules feed the load and what happens when one fails." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Same 2 MW of IT load, three different amounts of Schneider content.</b> The difference between the left panel and the right is double the UPS, double the battery, double the switchgear and double the distribution — for a customer whose IT load never changed. This is why "what topology?" is the first commercially meaningful question you can ask about any hall, and why the $/MW cost stack swings so widely between the low and high scenarios in the financial model.</figcaption>
+  </figure>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 30px; align-items: start;">
+    <div>
+      <h3 style="font-size: 24px; margin: 0 0 12px;">The Uptime tiers, in plain terms</h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 12px;">Uptime Institute's Tier system is the industry shorthand. Two of the four matter in practice:</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px;">
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>Tier III — concurrently maintainable.</strong> You can take any single component out for service without dropping the load. This is the commercial colo baseline.</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;"><strong>Tier IV — fault tolerant.</strong> Any single <em>unplanned</em> failure is survived automatically. Requires physically separate, compartmentalized paths. Meaningfully more expensive.</p>
+      </div>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;">Tiers I and II are legacy and you will rarely meet them in a modern colo build.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 20px 22px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The distinction worth carrying from HCA</div>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 10px;">Concurrently maintainable means you survive the <em>planned</em> event. Fault tolerant means you survive the <em>unplanned</em> one. That is structurally the same distinction as immutable versus indelible — surviving the first event is not the same as being protected against the next one. You already know how to have this conversation; only the substrate changed.</p>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;">It's also Chris's own example: the site that flips to generator, the failover works perfectly, and now there is no redundancy left and the C-suite is on the phone. The system succeeded. The <em>position</em> is terrible. Most buyers specify to the first event; the strategic conversation lives in the second.</p>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part III · The thermal path</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Heat out</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">Every watt delivered becomes a watt of heat. There are two ways to move it — air and liquid — and the industry is mid-transition between them. That transition is most of why this job exists right now.</p>
+</div>
+</sc-if>
+
+<section data-narr="4" data-screen-label="04 Cooling loops" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">04</div>
+    <h2 style="font-size: 34px; margin: 0;">The two loops</h2>
+    <button type="button" onClick="{{ play4 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">Start with the physics, because it explains everything downstream: <strong>water carries roughly three thousand times more heat per unit volume than air.</strong> Air worked fine when a rack drew 3 kW. At 100 kW you would need a wind tunnel. That single fact is why liquid cooling stopped being exotic.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">The diagram below shows both paths in the same hall — because that is the real situation. Almost nothing is all-liquid. Halls are hybrid, and the interesting engineering is at the junction.</p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="04-cooling-loops.svg" alt="Cooling diagram showing the air path from server through hot aisle containment to CRAH, and the liquid path from chip cold plate through manifold and CDU to facility water, both rejecting heat to the chilled water plant." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Two paths, one destination.</b> The critical structure to understand is the <em>loop separation</em> at the CDU: a clean, filtered, tightly-controlled loop runs to the chips (TCS), and it exchanges heat with the building's facility water (FWS) without ever mixing. That separation is why a CDU is not just a pump — it's the thing that lets you put liquid near a GPU without putting building water near a GPU. It is also, commercially, the box that opens the liquid conversation.</figcaption>
+  </figure>
+</section>
+
+<section data-narr="5" data-screen-label="05 CDU loop separation" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">05</div>
+    <h2 style="font-size: 34px; margin: 0;">What a CDU actually is — it's a transformer, for water</h2>
+    <button type="button" onClick="{{ play5 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">That analogy is precise rather than loose, and it's worth holding onto. A transformer sits at a boundary and does two jobs: it takes messy grid power and delivers clean power at the voltage the load needs, and the two sides are physically isolated. Energy crosses. Electrons don't.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">A <strong>coolant distribution unit</strong> does exactly that for liquid. It pumps the clean loop that goes to the chips, and passes heat into the building's loop through a plate heat exchanger. <strong>Heat crosses. Water doesn't.</strong></p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="05-cdu-loop-separation.svg" alt="Diagram of a coolant distribution unit sitting between the facility water loop and the technology cooling system loop, showing that heat passes between the two loops while the fluids never mix." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>The barrier down the middle is the product.</b> You cannot run building water through a cold plate on a $40,000 GPU — wrong pressure bursts it, wrong chemistry corrodes it, particulates block the microchannels, and water that is too cold condenses out of the room air onto live electronics. The CDU is what makes the two worlds compatible. <b>Schneider took a majority stake in Motivair in 2024 to own this box</b> — a bet that the CDU is the control point in liquid cooling.</figcaption>
+  </figure>
+  <p style="font-size: 15px; line-height: 1.6; max-width: 78ch; margin: 26px 0 22px;">Three more things worth knowing. It comes in <strong>sizes</strong> — in-rack (a few racks), in-row or "sidecar" (a cabinet beside the row, the one you'll hear most in AI builds), and room-level. <strong>L2L versus L2A</strong> is only a question of what it rejects heat into. And once you own the CDU you tend to own the manifolds, the loop and the service contract behind it.</p>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4fc7d4; margin-bottom: 8px;">Liquid-to-liquid CDU</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">L2L</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Rejects into facility chilled water. Higher capacity, needs a building water loop present. The new-build default.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4fc7d4; margin-bottom: 8px;">Liquid-to-air CDU</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">L2A</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Rejects into room air instead. Lower capacity, but it works in a hall with no water. <b>This is the retrofit product.</b></p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4fc7d4; margin-bottom: 8px;">Rear-door HX</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">RDHx</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Bolts onto the back of an existing cabinet. Takes a rack from ~15 kW to 40–60 kW with no server modification at all.</p>
+    </div>
+  </div>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 22px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The commercially important middle</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">Rear-door heat exchangers and liquid-to-air CDUs matter far more than their line item suggests, because they are the only way to add density to <em>an estate that already exists.</em> Equinix has 280-odd operating IBX sites and its own 10-K says power, not space, is the limiting factor. Every one of those halls is a candidate for a density retrofit that requires no new building. New-build gets the announcements. The installed base is where an incumbent supplier compounds.</p>
+  </div>
+</section>
+
+<section data-narr="6" data-screen-label="06 Density ladder" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">06</div>
+    <h2 style="font-size: 34px; margin: 0;">The density ladder</h2>
+    <button type="button" onClick="{{ play6 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">Rack density is the forcing function behind everything happening in this market. Here is the ladder, and which cooling technology is viable at each rung. Ranges are directional — real limits depend on airflow design, water temperature and how much engineering you throw at it.</p>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="06-density-ladder.svg" alt="Density ladder showing kilowatts per rack from 3 to over 130, mapped against viable cooling technologies from raised floor air through containment, rear door heat exchangers, and direct-to-chip liquid cooling." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>The green line is the whole market story.</b> Below roughly 20 kW a rack, air works and the incumbent architecture is fine. Above it, air stops being an engineering problem and becomes a physics problem — and every hall that wants AI workloads has to cross that line. Equinix's own published MRR-per-cabinet growth is attributed to rising density, which means they are already being paid to make this crossing.</figcaption>
+  </figure>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part IV · The layers that cross both</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Prefab and the digital layer</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">Two things that aren't a stage in either chain, but sit across all of them — and between them account for a tenth of the stack and most of the strategic argument.</p>
+</div>
+</sc-if>
+
+<section data-narr="7" data-screen-label="07 Prefab schedule" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">07</div>
+    <h2 style="font-size: 34px; margin: 0;">Prefabrication: why speed is the product</h2>
+    <button type="button" onClick="{{ play7 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">A prefabricated skid or pod is the power train — switchgear, transformer, UPS, distribution — built and fully tested in a factory, shipped as a unit, and connected on site. Instead of thirty trades assembling components in a half-built building, you land a tested block and plug it in.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">The reason this matters is not cost. Prefab is <em>roughly</em> cost-neutral. It matters because it compresses schedule and removes variance, and in a market where revenue starts on the energization date, <strong>schedule is money.</strong></p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="07-prefab-schedule.svg" alt="Comparison of stick-built and prefabricated construction schedules, showing prefab moving equipment assembly and testing off the critical path into the factory in parallel with site works." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>The gain isn't in any one bar — it's that the longest bar moved off the critical path.</b> Factory build and test happen while site works proceed, and a witnessed factory acceptance test replaces most of what would have been on-site commissioning. This only works if the design is repeatable, which is exactly why standardization and prefabrication are the same argument.</figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 26px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Connect this to Marc's published thesis</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0 0 10px;">Marc Garner argues publicly and consistently <em>against</em> bespoke engineering and <em>for</em> repeatable reference designs. Prefab is the physical expression of that argument — you cannot prefabricate a snowflake. When he talks about standardization, this is the mechanism he means, and speed is the benefit he is selling.</p>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">It also reframes your HCA story correctly. You did not get HCA a custom architecture. You got them to <em>raise a standard</em>, and once it was the standard it applied across the estate. Told that way, the story runs with his thesis instead of across it.</p>
+  </div>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part V · The commercial view</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Where the money actually is</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">The technology map, priced. This is the part that makes you dangerous rather than merely conversant.</p>
+</div>
+</sc-if>
+
+<section data-narr="8" data-screen-label="08 Cost stack" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">08</div>
+    <h2 style="font-size: 34px; margin: 0;">The money map</h2>
+    <button type="button" onClick="{{ play8 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">Below is the wall-inward cost stack per critical IT megawatt, base case, from your own financial model. Read it as <em>relative weight</em> rather than as quotable pricing.</p>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="08-cost-stack-per-mw.svg" alt="Bar chart of wall-inward cost per critical IT megawatt by product line, base case, showing UPS and battery as the largest at 850 thousand dollars and racks and containment the smallest at 120 thousand." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>The power train is the prize, not the attach.</b> Add the green bars — MV, transformers, LV, UPS, busway, skids — and electrical is roughly $2.9m of the $4.37m per megawatt, against liquid cooling's $600k. Liquid cooling is the fastest-growing and most contested line, and it opens the door. But anyone who sequences power behind cooling as an upsell has the business backwards.</figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 26px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Confidence — say this out loud before you say a number</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">These figures are triangulated from public benchmarks (JLL, Turner &amp; Townsend, Cushman &amp; Wakefield) against Equinix's own disclosed $10.53m per megawatt for Atlanta 10x-1. That cross-check lands at 41.5% wall-inward share versus Schneider's published c.43% — two independent routes, 1.5 points apart. <strong>The stack is defensible. Share-of-wallet assumptions on top of it are not.</strong> Lead with addressable spend, not with modelled revenue.</p>
+  </div>
+</section>
+
+<section data-narr="9" data-screen-label="09 Project lifecycle" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">09</div>
+    <h2 style="font-size: 34px; margin: 0;">How a job actually runs — and where you intervene</h2>
+    <button type="button" onClick="{{ play9 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">Here is the lifecycle of a single data center phase, with the decision points marked. The thing to internalize: <strong>by the time a specification is issued, the decisions that determine efficiency, topology and vendor have already been made.</strong> An RFQ is where you find out whether you won, not where you win.</p>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="09-project-lifecycle.svg" alt="Project lifecycle from site selection through basis of design, detailed design, procurement, manufacturing, installation, commissioning and operation, marking where a strategic account executive can and cannot influence the outcome." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Design engagement, not an RFQ response.</b> The green band on the left is where topology, efficiency targets and reference architecture get decided — and once those are set, the procurement outcome is largely determined. Everything to the right is execution. Note the last box: commissioning level 5, the integrated systems test with load banks, is where a supplier's reputation is actually made or destroyed. Ask to attend one.</figcaption>
+  </figure>
+</section>
+
+<section data-narr="10" data-screen-label="10 Lead-time gate" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">10</div>
+    <h2 style="font-size: 34px; margin: 0;">The lead-time gate</h2>
+    <button type="button" onClick="{{ play10 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">This is the most commercially useful single idea in the packet, and it is the reason a capacity agreement exists at all.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;"><strong>For most of this equipment, the order date — not the ground-breaking date — sets the energization date.</strong> Lead times on electrical plant now routinely exceed the construction schedule. A campus energizing in 2029 needs its transformer order placed in early 2027, which means the electrical architecture has to be settled during 2026.</p>
+  </div>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="10-lead-time-gate.svg" alt="Timeline showing equipment lead times measured backwards from energization date, with transformers requiring the earliest order and the design freeze date preceding all orders." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Read the bars right to left.</b> Each one starts at the date the order must be placed for the equipment to arrive in time. Transformers set the pace, and the architecture freeze sits ahead of all of them. This is why the ask is design engagement in 2026 rather than an RFQ response in 2028 — and why reserved manufacturing capacity is worth more to a customer than a discount. <b>Lead-time figures are directional and move every quarter; confirm current numbers with your supply chain team before quoting any.</b></figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 26px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The sentence that does the work</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">"A campus energizing in 2029 needs its transformer order placed in Q1 2027, which means the electrical architecture has to be settled during 2026." Say that to an Equinix construction lead and you are immediately in a different conversation than every other vendor in the queue — because you have just described their problem, not your product.</p>
+  </div>
+</section>
+
+<section data-narr="11" data-screen-label="11 Route to market" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">11</div>
+    <h2 style="font-size: 34px; margin: 0;">Who buys, and through which door</h2>
+    <button type="button" onClick="{{ play11 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">Two structural facts about how this business reaches the customer. First, roughly <strong>45% of what Equinix specifies is bought by someone else</strong> — an EPC or contractor — even when Equinix chose the product. Second, no single person owns the decision.</p>
+  </sc-if>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="11-route-to-market.svg" alt="Route to market diagram showing that about 55 percent of revenue is booked directly with Equinix while 45 percent is specified by Equinix but purchased through an EPC or contractor, alongside a map of the four stakeholder groups and what each owns." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;"><b>Knowing who owns the "no" is worth more than knowing who owns the budget.</b> The 55/45 split matters because nearly half your revenue arrives through a party you don't contract with — which means the EPC relationship is a real channel, not an afterthought, and being specified is worth as much as being bought.</figcaption>
+  </figure>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part VI · Your ramp</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Language, limits and a plan</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">The words you need, the places to stop talking, and how to compress months of learning into weeks.</p>
+</div>
+</sc-if>
+
+<section data-narr="12" data-screen-label="12 Vocabulary" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">12</div>
+    <h2 style="font-size: 34px; margin: 0;">Vocabulary you actually need</h2>
+    <button type="button" onClick="{{ play12 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px; overflow-x: auto;">
+    <table class="plate">
+      <thead><tr><th style="width: 20%;">Term</th><th style="width: 44%;">What it means</th><th style="width: 36%;">Why it comes up</th></tr></thead>
+      <tbody>
+        <tr><td><b>One-line / single-line</b></td><td>The diagram showing power flow from source to load</td><td>Every electrical conversation happens over one</td></tr>
+        <tr><td><b>Critical IT load</b></td><td>Power actually delivered to IT kit, in MW — the unit everything is priced against</td><td>Distinguish from gross/facility load, which includes cooling</td></tr>
+        <tr><td><b>PUE</b></td><td>Total facility power ÷ IT power. 1.0 is perfect; good modern halls run 1.2–1.3</td><td>The efficiency scoreboard, and it ties to Equinix's 2030 commitment</td></tr>
+        <tr><td><b>N, N+1, 2N</b></td><td>Redundancy topology — how much spare capacity beyond the load</td><td>Sets the equipment count, so it sets the deal size</td></tr>
+        <tr><td><b>Tier III / IV</b></td><td>Uptime Institute: concurrently maintainable vs fault tolerant</td><td>The resilience shorthand everyone uses</td></tr>
+        <tr><td><b>Concurrent maintainability</b></td><td>Service any component without dropping load</td><td>The commercial colo baseline</td></tr>
+        <tr><td><b>RMU</b></td><td>Ring main unit — MV switchgear fed from two directions</td><td>Standard at the MV entry point</td></tr>
+        <tr><td><b>ACB / MCCB</b></td><td>Air circuit breaker (big feeds) / molded-case (downstream)</td><td>LV switchgear conversations</td></tr>
+        <tr><td><b>Cast resin / dry-type</b></td><td>Transformer with no oil — indoor-safe, no fire containment burden</td><td>The data center default</td></tr>
+        <tr><td><b>Double conversion</b></td><td>UPS mode where power is always rectified and re-inverted — cleanest, least efficient</td><td>Versus eco-mode, which trades a transfer risk for efficiency points</td></tr>
+        <tr><td><b>Busway</b></td><td>Overhead power distribution you can tap anywhere along its length</td><td>Flexibility as densities change; versus fixed whips</td></tr>
+        <tr><td><b>PDU vs RPP</b></td><td>PDU includes a transformer; a remote power panel doesn't</td><td>People use them interchangeably and shouldn't</td></tr>
+        <tr><td><b>CRAH / CRAC</b></td><td>Computer room air handler (chilled water) / air conditioner (direct expansion)</td><td>CRAH dominates at scale</td></tr>
+        <tr><td><b>CDU</b></td><td>Coolant distribution unit — pumps and heat exchanger separating the chip loop from facility water</td><td>The gateway box for liquid cooling</td></tr>
+        <tr><td><b>TCS / FWS</b></td><td>Technology cooling system (clean chip loop) / facility water system (building loop)</td><td>The two loops a CDU sits between</td></tr>
+        <tr><td><b>RDHx</b></td><td>Rear-door heat exchanger — bolts to the cabinet, takes a rack to 40–60 kW</td><td>The retrofit path into an existing estate</td></tr>
+        <tr><td><b>Direct-to-chip / DLC</b></td><td>Cold plate on the processor lid; liquid removes heat at source</td><td>The AI-density default above ~40 kW</td></tr>
+        <tr><td><b>Approach temperature</b></td><td>Gap between the coolant supply temperature and what it's cooling</td><td>Smaller approach = more expensive plant</td></tr>
+        <tr><td><b>Delta-T</b></td><td>Temperature rise across the load</td><td>A wider delta-T moves the same heat with less flow</td></tr>
+        <tr><td><b>Free cooling / economizer</b></td><td>Rejecting heat using ambient conditions instead of running chillers</td><td>Why warmer supply water is the efficiency prize</td></tr>
+        <tr><td><b>L5 / IST</b></td><td>Integrated systems test — full load-bank commissioning of the whole facility</td><td>Where reputations are made; ask to attend one</td></tr>
+        <tr><td><b>Black building test</b></td><td>Killing utility power to prove the whole site rides through</td><td>The most consequential day of a build</td></tr>
+        <tr><td><b>Basis of design</b></td><td>The document fixing topology, efficiency targets and architecture</td><td><b>The document you must influence</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section data-narr="13" data-screen-label="13 What not to fake" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">13</div>
+    <h2 style="font-size: 34px; margin: 0;">What not to fake</h2>
+    <button type="button" onClick="{{ play13 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+    <div>
+      <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;">You said it yourself and it's the right instinct: you are not in the power industry today and shouldn't act like you know it all. That is not a weakness to manage — used deliberately, it is the most credible thing you can do in a room of engineers.</p>
+      <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;"><strong>Here is the line.</strong> Everything in this packet is yours to use: what the equipment does, why topology drives cost, why lead time drives schedule, where the money sits, how a project runs. That is business literacy and you should sound fluent.</p>
+      <p style="font-size: 16px; line-height: 1.6; margin: 0 0 12px;"><strong>Stop here, every time:</strong></p>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 15px; line-height: 1.5;">Sizing, selection or specification of any actual piece of equipment</div>
+        <div style="font-size: 15px; line-height: 1.5;">Protection coordination, selectivity, arc-flash calculations, fault current</div>
+        <div style="font-size: 15px; line-height: 1.5;">Whether a given topology meets a given Tier — that's a certification judgment</div>
+        <div style="font-size: 15px; line-height: 1.5;">Thermal modelling, CFD, flow rates, approach temperatures for a real hall</div>
+        <div style="font-size: 15px; line-height: 1.5;">Anything where being wrong would cost the customer money or safety</div>
+        <div style="font-size: 15px; line-height: 1.5;">Current lead times and current product configurations — these move quarterly</div>
+      </div>
+    </div>
+    <div>
+      <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 20px 22px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The move that works</div>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 10px;">"I know enough to know that's the right question and not enough to answer it well. Let me bring the engineer who owns it — and I'd like to be in that conversation because I want to understand it properly."</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">That answer does four things at once: it's honest, it demonstrates you know where the boundary is, it gets the right person into the account, and it signals you intend to learn rather than to delegate. Nobody has ever lost a deal by saying it. Plenty have lost deals by guessing.</p>
+      </div>
+      <p style="font-size: 16px; line-height: 1.6; margin: 18px 0 0;">And when the technical detail gets close to something confidential — a customer's architecture, another account's configuration — say the boundary out loud. Declining to answer is the better answer, and executives listen for exactly that instinct.</p>
+    </div>
+  </div>
+</section>
+
+<section data-narr="14" data-screen-label="14 The ramp" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">14</div>
+    <h2 style="font-size: 34px; margin: 0;">The ramp: 30 / 60 / 90</h2>
+    <button type="button" onClick="{{ play14 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 66ch; margin: 0 0 24px;">You said you learn by walking data centers and factories rather than in training rooms. Build the ramp around that.</p>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; margin-bottom: 8px;">First 30 days</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">See it, don't read it</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Two IBX walks minimum, one with an Equinix operations lead rather than a sales counterpart. One Schneider factory — ideally where skids are integrated and factory tested. Sit in on one L4 or L5 commissioning if the calendar allows.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; margin-bottom: 8px;">Days 30–60</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">Build the internal bench</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Name your sales engineer, your services lead, your supply chain contact and your regional counterparts in AMER, EMEA and APAC. Get the real lead-time table. Populate the calibration cell in the model with actual Equinix revenue.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; margin-bottom: 8px;">Days 60–90</div>
+      <h4 style="font-size: 22px; margin: 0 0 8px;">Convert it to a position</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Rewrite the account plan on internal data. Take a point of view on the reference design and the capacity framework. Have the design-engagement conversation with Equinix rather than the RFQ conversation.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size: 24px; margin: 38px 0 12px;">Questions to carry onto a site walk</h3>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 66ch; margin: 0 0 22px;">Ask these of the operator, not the salesperson. The answers teach faster than any document, and asking them is itself the credibility.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px 26px;">
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">What topology is this hall, and why that one?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">Opens redundancy, cost and the customer's own risk appetite in one question.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">What's your average and peak rack density today, and where do you think it goes?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">Locates them on the density ladder and tells you whether liquid is a today or tomorrow conversation.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">What's your PUE, and what's the biggest thing standing between you and a better one?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">The second half is the real question. It usually surfaces a constraint nobody has budgeted for.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">Which piece of equipment here gives you the most trouble?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">The single best question on this list. It gets you the standing complaint list, which is the fastest map of where trust is won or lost.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">What's your supply water temperature, and could you run it warmer?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">Signals you understand that efficiency lives in the plant, not the hall.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">Walk me through the last time you went to generator.</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">You will learn more about how they actually think about resilience in this answer than in any document.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">How long from order to energization on your last phase, and what was the long pole?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">Gets you real lead-time data and opens the capacity-reservation conversation naturally.</div>
+    </div>
+    <div style="border-top: 1px solid rgba(230,239,233,0.14); padding-top: 12px;">
+      <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; line-height: 1.25; margin-bottom: 5px;">Who writes the basis of design — you, or a consultant?</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #8fa398;">Tells you which door to walk through. This is the answer that determines your whole account strategy.</div>
+    </div>
+  </div>
+
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 30px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">One more thing</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">You have a line you already use — that you need to be a student of the technology and of the standards. This packet is a start on the first half. The second half, <em>what Equinix specifically buys from Schneider and to what standard</em>, is the part you cannot get from outside the walls. Say that plainly rather than papering over it. Knowing precisely which half you're missing is a stronger position than pretending you have both.</p>
+  </div>
+</section>
+
+<footer style="max-width: 1180px; margin: 84px auto 0; border-top: 1px solid rgba(230,239,233,0.14); padding-top: 22px; font-size: 13px; line-height: 1.6; color: #5c7367;">
+  <p style="margin: 0 0 6px;">Wall-Inward Field Manual · figure set · August 2026. Built entirely from public sources. Not a Schneider Electric document.</p>
+  <p style="margin: 0;">Cost figures are triangulated planning estimates, not pricing. Product names and lead times are directional — confirm both internally before quoting.</p>
+</footer>
+
+<sc-if value="{{ narrOn }}" hint-placeholder-val="{{ true }}">
+<div style="position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 322px; max-width: calc(100vw - 40px); background: #09150e; border: 1px solid rgba(61,205,88,0.35); box-shadow: 0 20px 54px rgba(0,0,0,0.66);">
+
+  <sc-if value="{{ narrOpen }}" hint-placeholder-val="{{ true }}">
+  <div style="padding: 14px 16px 13px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #3dcd58; flex: 1 1 auto;">Guided narration</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #5c7367;">{{ narrCounter }}</div>
+      <button type="button" onClick="{{ narrFold }}" title="Collapse" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1; background: transparent; border: 1px solid rgba(230,239,233,0.18); color: #cddbd2; cursor: pointer; border: 0; padding: 2px 4px; color: #5c7367;" style-hover="color: #3dcd58;">–</button>
+    </div>
+
+    <div style="font-family: Archivo, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 17px; line-height: 1.18; min-height: 40px; margin-bottom: 11px;">{{ narrTitle }}</div>
+
+    <div onClick="{{ narrScrub }}" style="position: relative; height: 17px; margin-bottom: 6px; cursor: pointer;">
+      <div style="position: absolute; left: 0; right: 0; top: 7px; height: 3px; background: rgba(230,239,233,0.13);"></div>
+      <div style="position: absolute; left: 0; top: 7px; height: 3px; background: #3dcd58; width: {{ narrPct }};"></div>
+      <button type="button" onClick="{{ play0 }}" title="Welcome" style="position: absolute; top: 0; bottom: 0; left: 0.20%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play1 }}" title="Section 01" style="position: absolute; top: 0; bottom: 0; left: 5.79%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play2 }}" title="Section 02" style="position: absolute; top: 0; bottom: 0; left: 11.82%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play3 }}" title="Section 03" style="position: absolute; top: 0; bottom: 0; left: 18.50%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play4 }}" title="Section 04" style="position: absolute; top: 0; bottom: 0; left: 25.98%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play5 }}" title="Section 05" style="position: absolute; top: 0; bottom: 0; left: 32.00%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play6 }}" title="Section 06" style="position: absolute; top: 0; bottom: 0; left: 40.09%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play7 }}" title="Section 07" style="position: absolute; top: 0; bottom: 0; left: 45.29%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play8 }}" title="Section 08" style="position: absolute; top: 0; bottom: 0; left: 52.16%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play9 }}" title="Section 09" style="position: absolute; top: 0; bottom: 0; left: 59.21%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play10 }}" title="Section 10" style="position: absolute; top: 0; bottom: 0; left: 65.90%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play11 }}" title="Section 11" style="position: absolute; top: 0; bottom: 0; left: 73.06%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play12 }}" title="Section 12" style="position: absolute; top: 0; bottom: 0; left: 78.25%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play13 }}" title="Section 13" style="position: absolute; top: 0; bottom: 0; left: 83.78%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play14 }}" title="Section 14" style="position: absolute; top: 0; bottom: 0; left: 91.31%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 11px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: #8fa398;">{{ narrClock }}</div>
+      <button type="button" onClick="{{ narrRate }}" title="Playback speed" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; background: transparent; border: 1px solid rgba(230,239,233,0.18); color: #cddbd2; cursor: pointer; padding: 4px 8px; min-width: 46px;" style-hover="border-color: #3dcd58; color: #3dcd58;">{{ narrRateLabel }}</button>
+    </div>
+
+    <div style="display: flex; gap: 7px;">
+      <button type="button" onClick="{{ narrPrev }}" title="Previous section" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; background: transparent; border: 1px solid rgba(230,239,233,0.18); color: #cddbd2; cursor: pointer; padding: 9px 12px; opacity: {{ narrPrevOp }};" style-hover="border-color: #3dcd58; color: #3dcd58;">◀◀</button>
+      <button type="button" onClick="{{ narrToggle }}" style="font-family: 'JetBrains Mono', monospace; flex: 1 1 auto; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #05100a; background: #3dcd58; border: 0; padding: 9px 10px; cursor: pointer;" style-hover="background: #7fe295;">{{ narrPlayLabel }}</button>
+      <button type="button" onClick="{{ narrNext }}" title="Next section" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; background: transparent; border: 1px solid rgba(230,239,233,0.18); color: #cddbd2; cursor: pointer; padding: 9px 12px; opacity: {{ narrNextOp }};" style-hover="border-color: #3dcd58; color: #3dcd58;">▶▶</button>
+    </div>
+
+    <div style="font-size: 11px; line-height: 1.45; color: #5c7367; margin-top: 9px;">{{ narrFoot }}</div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ narrShut }}" hint-placeholder-val="{{ false }}">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 9px 11px;">
+    <button type="button" onClick="{{ narrToggle }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #05100a; background: #3dcd58; border: 0; padding: 7px 11px; cursor: pointer;" style-hover="background: #7fe295;">{{ narrPlayLabel }}</button>
+    <div style="flex: 1 1 auto; min-width: 0; font-size: 12px; line-height: 1.25; color: #cddbd2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ narrTitle }}</div>
+    <button type="button" onClick="{{ narrFold }}" title="Expand" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1; background: transparent; border: 0; padding: 3px 4px; color: #5c7367; cursor: pointer;" style-hover="color: #3dcd58;">▲</button>
+  </div>
+  </sc-if>
+
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;narrOn&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Narration&quot;},&quot;showLead&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showParts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showKeystrip&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { idx: 0, playing: false, rate: 1, supported: true, source: 'audio', time: 2.40, open: true, load: 'idle', loadPct: 0 };
+
+  script = [
+    { title: 'Welcome — how to use this', text: "Welcome to the wall-inward field manual. If you are new to this business, start here. Everything in a data centre between the utility connection and the chip is what we mean by wall inward, and this packet walks it in eleven figures, in document order. There are only two flows to keep in your head. Electrons come in, and heat goes out. Every piece of equipment you will meet does one of those two jobs. Colour carries that meaning throughout: green is power, cyan is cooling, and anything drawn with a dashed line sits outside our scope. Read it straight through the first time. After that, use it as a reference. Each section has a listen button, so you can come back and hear any single piece again." },
+    { title: '01 · The boundary', text: "Section one, the boundary. The single most useful thing to get right early is where your scope starts and stops. Get this wrong in a meeting and you will either claim something you cannot deliver, or concede something you own. The dashed boxes in the figure are the argument. The utility feed, the generators, the I T equipment, and critically the chilled water plant, all sit outside what this group sells. The plant is the one people get wrong. It is roughly four hundred and fifty thousand dollars per megawatt of real money, it usually sits outside the building envelope, and the financial model excludes it. There are four boundary traps below the figure. Learn them, and agree the boundary early in any commercial conversation." },
+    { title: '02 · The one-line', text: "Section two, the one-line diagram. A one-line, sometimes called a single-line, is the drawing every electrical conversation happens over. It collapses three-phase power into a single line and shows the sequence of protection and transformation from source to load. If you learn to read one document in this job, make it this one. Read the figure left to right. Voltage steps down, and the number of paths multiplies. What you are looking at is two complete, independent paths, from two utility feeds, to one dual-corded rack. That is called two N. The generator is the only shared element, and it backs both sides. That separation is the resilience. Below the figure is a stage by stage table. It covers what each box does, what Schneider calls it, and what to listen for when a customer talks about it." },
+    { title: '03 · Redundancy', text: "Section three, redundancy. This is the highest-leverage concept in the packet. Topology is the single biggest determinant of how much equipment a megawatt needs, and therefore of what that megawatt is worth. Two facilities with identical I T load can differ by nearly double in electrical content, depending purely on how they are configured. N means exactly what the load requires and nothing more. The figure shows the same two megawatts of I T load, configured three ways. The difference between the left panel and the right is double the U P S, double the battery, double the switchgear and double the distribution, for a customer whose I T load never changed. That is why what topology is the first commercially meaningful question you can ask about any hall. Below, the Uptime tiers in plain terms, and the distinction worth carrying: concurrently maintainable means you survive the planned event, fault tolerant means you survive the unplanned one." },
+    { title: '04 · The two loops', text: "Section four, the two cooling loops. Start with the physics, because it explains everything downstream. Water carries roughly three thousand times more heat per unit volume than air. Air worked fine when a rack drew three kilowatts. At one hundred kilowatts you would need a wind tunnel. That single fact is why liquid cooling stopped being exotic. The figure shows both paths in the same hall, because that is the real situation. Almost nothing is all liquid. Halls are hybrid, and the interesting engineering is at the junction. The critical structure to understand is the loop separation at the C D U. A clean, filtered, tightly controlled loop runs to the chips, and it exchanges heat with the building's facility water without the two ever mixing." },
+    { title: '05 · What a CDU is', text: "Section five, what a C D U actually is. The best way to understand it is that it is a transformer, for water. That analogy is precise rather than loose. A transformer sits at a boundary and does two jobs. It takes messy grid power and delivers clean power at the voltage the load needs, and the two sides are physically isolated. Energy crosses. Electrons do not. A coolant distribution unit does exactly that for liquid. It pumps the clean loop that goes to the chips, and passes heat into the building's loop through a plate heat exchanger. Heat crosses. Water does not. The barrier down the middle is the product. You cannot run building water through a cold plate on a forty thousand dollar G P U. Wrong pressure bursts it, wrong chemistry corrodes it, particulates block the microchannels, and water that is too cold condenses onto live electronics. Schneider took a majority stake in Motivair in twenty twenty-four to own this box." },
+    { title: '06 · The density ladder', text: "Section six, the density ladder. Rack density is the forcing function behind everything happening in this market. The figure shows the ladder in kilowatts per rack, and which cooling technology is viable at each rung. Treat the ranges as directional. Real limits depend on airflow design, water temperature, and how much engineering you throw at the problem. The green line is the whole market story. Below roughly twenty kilowatts a rack, air works, and the incumbent architecture is fine. Above it, air stops being an engineering problem and becomes a physics problem. Every hall that wants A I workloads has to cross that line." },
+    { title: '07 · Prefabrication', text: "Section seven, prefabrication. A prefabricated skid or pod is the power train, switchgear, transformer, U P S and distribution, built and fully tested in a factory, shipped as a unit, and connected on site. Instead of thirty trades assembling components in a half-built building, you land a tested block and plug it in. The reason this matters is not cost. Prefab is roughly cost neutral. It matters because it compresses schedule and removes variance, and in a market where revenue starts on the energization date, schedule is money. Look at the figure carefully. The gain is not in any one bar. It is that the longest bar moved off the critical path. Factory build and test happen while site works proceed. This only works if the design is repeatable, which is why standardization and prefabrication are the same argument." },
+    { title: '08 · The money map', text: "Section eight, the money map. This is the wall-inward cost stack per critical I T megawatt, base case. Read it as relative weight, not as quotable pricing. The headline is that the power train is the prize, not the attach. Add the green bars, medium voltage, transformers, low voltage, U P S, busway and skids, and electrical is roughly two point nine million dollars of the four point three seven million per megawatt, against liquid cooling's six hundred thousand. Liquid cooling is the fastest growing and most contested line, and it opens the door. But anyone who sequences power behind cooling as an upsell has the business backwards. One discipline before you quote anything: these figures are triangulated from public benchmarks. The stack is defensible. Share of wallet assumptions on top of it are not. Lead with addressable spend." },
+    { title: '09 · How a job runs', text: "Section nine, how a job actually runs, and where you intervene. The figure is the lifecycle of a single data centre phase, with the decision points marked. The thing to internalise is this. By the time a specification is issued, the decisions that determine efficiency, topology and vendor have already been made. A request for quote is where you find out whether you won. It is not where you win. The green band on the left is where topology, efficiency targets and reference architecture get decided, and once those are set, the procurement outcome is largely determined. Everything to the right is execution. Note the last box. Commissioning level five, the integrated systems test with load banks, is where a supplier's reputation is made or destroyed. Ask to attend one." },
+    { title: '10 · The lead-time gate', text: "Section ten, the lead-time gate. This is the most commercially useful single idea in the packet, and it is the reason a capacity agreement exists at all. For most of this equipment, the order date, not the ground-breaking date, sets the energization date. Lead times on electrical plant now routinely exceed the construction schedule. Read the bars in the figure right to left. Each one starts at the date the order must be placed for the equipment to arrive in time. Transformers set the pace, and the architecture freeze sits ahead of all of them. Here is the sentence that does the work. A campus energizing in twenty twenty-nine needs its transformer order placed in the first quarter of twenty twenty-seven, which means the electrical architecture has to be settled during twenty twenty-six. One caution: lead-time figures move every quarter. Confirm current numbers with your supply chain team before you quote any." },
+    { title: '11 · Route to market', text: "Section eleven, who buys, and through which door. Two structural facts. First, roughly forty-five per cent of what a large colocation customer specifies is bought by someone else, an engineering procurement and construction firm, or a contractor, even when the customer chose the product. Second, no single person owns the decision. Knowing who owns the no is worth more than knowing who owns the budget. The fifty-five forty-five split matters because nearly half your revenue arrives through a party you do not contract with. That means the E P C relationship is a real channel, not an afterthought, and being specified is worth as much as being bought." },
+    { title: '12 · Vocabulary', text: "Section twelve, vocabulary. The table below is the language you need, rather than everything that exists. It is deliberately short. Learn the terms, and most technical conversations become navigable. A handful carry more weight than the rest. Critical I T load is the unit everything is priced against, so keep it distinct from gross facility load, which includes cooling. P U E is the efficiency scoreboard, total facility power divided by I T power. N, N plus one and two N set the equipment count, so they set the deal size. And basis of design is the document that fixes topology, efficiency targets and architecture. That is the document you must influence." },
+    { title: '13 · What not to fake', text: "Section thirteen, what not to fake. If you are new to power and cooling, do not act as though you know it all. Used deliberately, that is the most credible thing you can do in a room of engineers. Here is the line. Everything in this packet is yours to use. What the equipment does, why topology drives cost, why lead time drives schedule, where the money sits, how a project runs. That is business literacy, and you should sound fluent. Stop, every time, at sizing or specifying an actual piece of equipment, at protection coordination and fault calculations, at whether a topology meets a given tier, at thermal modelling for a real hall, and at current lead times and product configurations. The move that works is simple. Say: I know enough to know that is the right question, and not enough to answer it well. Let me bring the engineer who owns it, and I would like to be in that conversation. Nobody has lost a deal by saying that. Plenty have lost deals by guessing." },
+    { title: '14 · The ramp', text: "Section fourteen, the ramp. If you learn by walking data centres and factories rather than sitting in training rooms, build your first ninety days around that. In the first thirty days, see it rather than read it. Two site walks minimum, one with an operations lead rather than a sales counterpart. One factory, ideally where skids are integrated and factory tested. Sit in on a commissioning test if the calendar allows. Days thirty to sixty, build the internal bench. Name your sales engineer, your services lead, your supply chain contact and your regional counterparts. Get the real lead-time table. Days sixty to ninety, convert it into a position. Rewrite the account plan on internal data, take a point of view on the reference design, and have the design engagement conversation rather than the request for quote conversation. Below are eight questions to carry onto a site walk. Ask them of the operator, not the salesperson. The best one on the list is: which piece of equipment here gives you the most trouble." }
+  ];
+
+  componentDidMount() {
+    this.tts = typeof window !== 'undefined' && 'speechSynthesis' in window;
+    if (this.tts) window.speechSynthesis.getVoices();
+    if (!this.tts) this.setState({ supported: false });
+    if (window.__wiNarration) { try { window.__wiNarration.pause(); } catch (e) {} }
+    this.ensureAudio();
+    this.loadRecording();
+    // The live instance polls the shared element rather than relying on a
+    // handler bound during some earlier mount — that binding is what silently
+    // froze the clock and the figures.
+    this._loop = setInterval(() => this.tick(), 180);
+    if (typeof window !== 'undefined' && window.innerWidth < 1100) this.setState({ open: false });
+    this._stop = () => {
+      if (this.tts) window.speechSynthesis.cancel();
+      if (window.__wiNarration) { try { window.__wiNarration.pause(); } catch (e) {} }
+    };
+    window.addEventListener('beforeunload', this._stop);
+  }
+
+  tick() {
+    if (this._dead || this.state.source !== 'audio') return;
+    const a = window.__wiNarration;
+    if (!a || !isFinite(a.currentTime)) return;
+    const t = a.currentTime, playing = !a.paused && !a.ended;
+    const i = this.indexAt(t);
+    const patch = {};
+    if (Math.abs(t - this.state.time) > 0.05) patch.time = t;
+    if (i !== this.state.idx) patch.idx = i;
+    if (playing !== this.state.playing) patch.playing = playing;
+    if (!Object.keys(patch).length) return;
+    const moved = patch.idx != null;
+    this.setState(patch, () => { if (moved && playing) this.focus(i); });
+  }
+
+  componentWillUnmount() {
+    this._dead = true;
+    if (this._loop) clearInterval(this._loop);
+    this._seq = (this._seq || 0) + 1;
+    this.stopAudio();
+    if (this._stop) window.removeEventListener('beforeunload', this._stop);
+  }
+
+  pickVoice() {
+    const vs = window.speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+    const pref = ['Google UK English Male', 'Daniel', 'Google US English', 'Samantha', 'Microsoft Guy', 'Microsoft Aria'];
+    for (const p of pref) { const hit = vs.find(v => v.name === p); if (hit) return hit; }
+    return vs[0] || null;
+  }
+
+  focus(i) {
+    const el = document.querySelector('[data-narr="' + i + '"]');
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 72;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  // One continuous recording. Marks set from a listen-through pass.
+  track = {
+    src: 'narration.mp3',
+    end: 828.0,
+    marks: [1.68, 47.96, 97.83, 153.17, 215.12, 264.92, 331.93, 374.98,
+            431.87, 490.20, 545.62, 604.93, 647.85, 693.64, 755.98]
+  };
+
+  // Streaming MP3 over a host that ignores byte-range requests is NOT seekable:
+  // every currentTime assignment snaps back to zero. Pulling the file down once
+  // and handing the element a blob URL makes it seekable everywhere, including
+  // offline and from a local file.
+  // The element, the blob and the in-flight fetch all live on window, so a
+  // remount adopts them instead of starting a second player over the first.
+  async loadRecording() {
+    if (window.__wiBlob) { this.adoptBlob(window.__wiBlob); return; }
+    if (window.__wiLoad) {
+      this.setState({ load: 'loading', loadPct: this.state.loadPct });
+      try { const url = await window.__wiLoad; if (!this._dead) this.adoptBlob(url); }
+      catch (e) { if (!this._dead) this.setState({ load: 'failed' }); }
+      return;
+    }
+    this.setState({ load: 'loading', loadPct: 0 });
+    window.__wiLoad = (async () => {
+      const res = await fetch(this.track.src);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const total = Number(res.headers.get('content-length') || 0);
+      let blob;
+      if (total && res.body && res.body.getReader) {
+        const reader = res.body.getReader();
+        const chunks = [];
+        let got = 0, shown = 0;
+        for (;;) {
+          const r = await reader.read();
+          if (r.done) break;
+          chunks.push(r.value);
+          got += r.value.length;
+          const pct = Math.floor(got / total * 100);
+          if (pct >= shown + 2) { shown = pct; if (!this._dead) this.setState({ loadPct: pct }); }
+        }
+        blob = new Blob(chunks, { type: res.headers.get('content-type') || 'audio/mpeg' });
+      } else {
+        blob = await res.blob();
+      }
+      const url = URL.createObjectURL(blob);
+      window.__wiBlob = url;
+      return url;
+    })();
+    try { const url = await window.__wiLoad; if (!this._dead) this.adoptBlob(url); }
+    catch (e) { window.__wiLoad = null; if (!this._dead) this.setState({ load: 'failed' }); }
+  }
+
+  adoptBlob(url) {
+    this._blobUrl = url;
+    const a = this.ensureAudio();
+    const at = a.currentTime, wasPlaying = !a.paused;
+    if (a.src !== url) { a.src = url; a.load(); }
+    this.setState({ load: 'ready', loadPct: 100 });
+    const want = this._pendingIdx;
+    this._pendingIdx = null;
+    if (want != null) { this.play(want, true); return; }
+    if (this.state.playing || wasPlaying) {
+      const i = this.state.idx;
+      this.startAt(a, Math.max(at, this.track.marks[i]), i);
+    }
+  }
+
+  seekable() {
+    const a = this._audio;
+    if (!a) return false;
+    try { return a.seekable && a.seekable.length > 0 && a.seekable.end(0) > 1; }
+    catch (e) { return false; }
+  }
+
+  // Every element ever created is registered here. new Audio() elements are not
+  // in the DOM, so a stale one from a previous mount is otherwise unreachable —
+  // this is what makes a second voice over the first impossible.
+  silenceAll(keep) {
+    const reg = window.__wiAll || [];
+    for (const el of reg) {
+      if (el === keep) continue;
+      try { el.pause(); el.ontimeupdate = null; el.onended = null; el.onerror = null; } catch (e) {}
+    }
+    if (this.tts && typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+  }
+
+  stopAudio() { this.silenceAll(null); }
+
+  // Position is the single source of truth for the current section, so any seek
+  // self-corrects instead of being tracked separately.
+  sectionEnd(i) {
+    return i + 1 < this.track.marks.length ? this.track.marks[i + 1] : this.track.end;
+  }
+
+  indexAt(t) {
+    const m = this.track.marks;
+    for (let i = m.length - 1; i >= 0; i--) if (t >= m[i] - 0.02) return i;
+    return 0;
+  }
+
+  fmt(t) {
+    if (!isFinite(t) || t < 0) t = 0;
+    return Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+  }
+
+  ensureAudio() {
+    let a = window.__wiNarration;
+    if (!a) {
+      a = new Audio(window.__wiBlob || this.track.src);
+      a.preload = 'metadata';
+      window.__wiNarration = a;
+      window.__wiAll = (window.__wiAll || []).concat(a);
+    }
+    this.silenceAll(a);
+    // Adopting: these assignments replace any previous instance's handlers, so
+    // a stale component can no longer drive this element.
+    a.onerror = () => { if (this.state.load !== 'loading') this.setState({ load: 'failed' }); };
+    a.onended = () => this.halt();
+    a.ontimeupdate = () => {
+      if (this._dead || this.state.source !== 'audio') return;
+      const t = a.currentTime, now = Date.now();
+      const i = this.indexAt(t);
+      if (i !== this.state.idx) {
+        this._tick = now;
+        this.setState({ idx: i, time: t });
+        if (this.state.playing) this.focus(i);
+        return;
+      }
+      if (now - (this._tick || 0) > 240) { this._tick = now; this.setState({ time: t }); }
+    };
+    this._audio = a;
+    return a;
+  }
+
+  startAt(a, t, i) {
+    this._seq = (this._seq || 0) + 1;
+    const seq = this._seq;
+    const go = () => {
+      if (this._dead || seq !== this._seq) return;
+      this.silenceAll(a);
+      a.playbackRate = this.state.rate;
+      try { a.currentTime = t; } catch (e) {}
+      const p = a.play();
+      if (p && p.catch) p.catch(() => this.setState({ playing: false }));
+    };
+    if (a.readyState >= 1) go();
+    else a.addEventListener('loadedmetadata', go, { once: true });
+  }
+
+  play(i, scroll) {
+    if (!this.script[i]) return;
+    this._cancelled = false;
+    this.setState({ idx: i, playing: true, time: this.track.marks[i] });
+    if (scroll) this.focus(i);
+
+    const needsSeek = i > 0;
+    if (this.state.load === 'failed' && !this.seekable() && needsSeek) {
+      this.speakTTS(i);
+      return;
+    }
+    // Recording still downloading: remember the ask and honour it on arrival.
+    if (needsSeek && !window.__wiBlob && this.state.load !== 'failed') {
+      this._pendingIdx = i;
+      this.stopAudio();
+      return;
+    }
+    const a = this.ensureAudio();
+    this.silenceAll(a);
+    this.setState({ source: 'audio' });
+    this.startAt(a, this.track.marks[i], i);
+  }
+
+  resume() {
+    const i = this.state.idx;
+    const a = this.ensureAudio();
+    this._cancelled = false;
+    this.silenceAll(a);
+    this.setState({ playing: true, source: 'audio' });
+    if (a.readyState < 1 || a.currentTime < this.track.marks[0] - 0.5) {
+      this.play(i, true);
+      return;
+    }
+    this.silenceAll(a);
+    a.playbackRate = this.state.rate;
+    const p = a.play();
+    if (p && p.catch) p.catch(() => this.setState({ playing: false }));
+  }
+
+  scrubTo(frac) {
+    const t = Math.max(0, Math.min(this.track.end - 0.5, frac * this.track.end));
+    const i = this.indexAt(t);
+    if (!window.__wiBlob && !this.seekable()) { this.play(i, true); return; }
+    const a = this.ensureAudio();
+    this.setState({ idx: i, time: t, source: 'audio' });
+    this.focus(i);
+    if (this.state.playing) this.startAt(a, t, i);
+    else { try { a.currentTime = t; } catch (e) {} }
+  }
+
+  speakTTS(i) {
+    if (!this.tts) { this.setState({ playing: false }); return; }
+    // Only ever the fallback: if the recording loaded, it owns playback.
+    if (window.__wiBlob) { this.play(i, false); return; }
+    this.silenceAll(null);
+    this.setState({ source: 'voice' });
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(this.script[i].text);
+    u.rate = this.state.rate;
+    u.pitch = 1;
+    const v = this.pickVoice();
+    if (v) { u.voice = v; u.lang = v.lang; }
+    u.onend = () => {
+      if (this._cancelled) return;
+      const next = i + 1;
+      if (next < this.script.length) this.play(next, true);
+      else this.setState({ playing: false });
+    };
+    window.speechSynthesis.speak(u);
+  }
+
+  halt() {
+    this._cancelled = true;
+    this._seq = (this._seq || 0) + 1;
+    this._pendingIdx = null;
+    this.silenceAll(null);
+    this.setState({ playing: false });
+  }
+
+  jump(i) {
+    this._cancelled = true;
+    this._seq = (this._seq || 0) + 1;
+    this._pendingIdx = null;
+    this.silenceAll(null);
+    const seq = this._seq;
+    setTimeout(() => { if (seq === this._seq) this.play(i, true); }, 30);
+  }
+
+  renderVals() {
+    const { idx, playing, rate, source, time, open, load, loadPct } = this.state;
+    const rateLabels = { 0.85: '0.85×', 1: '1×', 1.15: '1.15×', 1.3: '1.3×' };
+    const waiting = this._pendingIdx != null;
+    let foot;
+    if (load === 'loading' && loadPct < 100) {
+      foot = waiting
+        ? 'Loading the recording · ' + loadPct + '% — starts when ready.'
+        : 'Loading the recording · ' + loadPct + '%';
+    } else if (source === 'voice') {
+      foot = this.tts
+        ? 'Recording unavailable — using your browser voice.'
+        : 'Try Chrome, Edge or Safari for spoken narration.';
+    } else {
+      foot = 'Recorded narration · click the ticks to jump.';
+    }
+    const vals = {
+      showLead: this.props.showLead ?? true,
+      showParts: this.props.showParts ?? true,
+      showKeystrip: this.props.showKeystrip ?? true,
+      narrOn: this.props.narrOn ?? true,
+      narrOpen: open !== false,
+      narrShut: open === false,
+      narrCounter: (idx + 1) + ' / ' + this.script.length,
+      narrTitle: this.script[idx].title,
+      narrPlayLabel: waiting ? 'Loading' : (playing ? 'Pause' : (time > this.track.marks[0] + 1 ? 'Resume' : 'Play')),
+      narrRateLabel: rateLabels[rate] || rate + '×',
+      narrPct: (Math.max(0, Math.min(1, time / this.track.end)) * 100).toFixed(2) + '%',
+      narrClock: this.fmt(time) + ' / ' + this.fmt(this.track.end),
+      narrPrevOp: idx === 0 ? '0.3' : '1',
+      narrNextOp: idx === this.script.length - 1 ? '0.3' : '1',
+      narrFoot: foot,
+      narrToggle: () => { if (playing || waiting) this.halt(); else this.resume(); },
+      narrPrev: () => { if (idx > 0) this.jump(idx - 1); },
+      narrNext: () => { if (idx < this.script.length - 1) this.jump(idx + 1); },
+      narrFold: () => this.setState({ open: open === false }),
+      narrScrub: (e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        this.scrubTo((e.clientX - r.left) / r.width);
+      },
+      narrRate: (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        const steps = [0.85, 1, 1.15, 1.3];
+        const next = steps[(steps.indexOf(rate) + 1) % steps.length];
+        this.setState({ rate: next }, () => {
+          if (this._audio) this._audio.playbackRate = next;
+          if (this.state.playing && this.state.source === 'voice') this.jump(this.state.idx);
+        });
+      }
+    };
+    for (let i = 0; i < this.script.length; i++) {
+      vals['play' + i] = (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.jump(i); };
+    }
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

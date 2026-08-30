@@ -1,0 +1,132 @@
+<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" aria-label="Single-line diagram from utility medium voltage through MV switchgear, transformer, generator transfer, low-voltage switchgear, UPS and battery, busway and PDU, to dual-corded rack loads on independent A and B paths."><defs><marker id="a-A65F0B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3dcd58"></path></marker></defs><title>Data centre power one-line, utility to rack</title>
+        
+
+        
+        <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398">
+          <text x="70" y="20" text-anchor="middle">UTILITY</text>
+          <text x="196" y="20" text-anchor="middle">MV SWITCHGEAR</text>
+          <text x="330" y="20" text-anchor="middle">TRANSFORMER</text>
+          <text x="452" y="20" text-anchor="middle">GEN / ATS</text>
+          <text x="574" y="20" text-anchor="middle">LV SWITCHGEAR</text>
+          <text x="700" y="20" text-anchor="middle">UPS + BATTERY</text>
+          <text x="820" y="20" text-anchor="middle">BUSWAY / PDU</text>
+          <text x="932" y="20" text-anchor="middle">RACK</text>
+        </g>
+        <line stroke="#3f5c4b" fill="none" x1="20" y1="28" x2="980" y2="28" stroke-width="1"></line>
+
+        
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#3dcd58" font-weight="500" x="24" y="98">A</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#3dcd58" font-weight="500" x="24" y="298">B</text>
+
+        
+        
+        <circle fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" cx="70" cy="110" r="16"></circle>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="70" y="114" text-anchor="middle">~</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="70" y="142" text-anchor="middle">11–35 kV</text>
+
+        <line stroke="#3dcd58" fill="none" x1="86" y1="110" x2="150" y2="110" stroke-width="2"></line>
+        
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="150" y="96" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="164" y="115" text-anchor="middle">×</text>
+        <line stroke="#3dcd58" fill="none" x1="178" y1="110" x2="216" y2="110" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="216" y="96" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="230" y="115" text-anchor="middle">×</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="196" y="80" text-anchor="middle">RMU / metal-clad</text>
+
+        <line stroke="#3dcd58" fill="none" x1="244" y1="110" x2="300" y2="110" stroke-width="2"></line>
+        
+        <circle stroke="#3dcd58" fill="none" cx="322" cy="102" r="14" stroke-width="1.8"></circle>
+        <circle stroke="#3dcd58" fill="none" cx="322" cy="118" r="14" stroke-width="1.8"></circle>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="330" y="152" text-anchor="middle">→ 400/480 V</text>
+        <line stroke="#3dcd58" fill="none" x1="344" y1="110" x2="410" y2="110" stroke-width="2"></line>
+
+        
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="410" y="94" width="46" height="32"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="433" y="114" text-anchor="middle">ATS</text>
+        <line stroke="#3dcd58" fill="none" x1="456" y1="110" x2="520" y2="110" stroke-width="2"></line>
+
+        
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="520" y="90" width="14" height="40"></rect>
+        <line stroke="#3dcd58" fill="none" x1="534" y1="110" x2="560" y2="110" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="560" y="96" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="574" y="115" text-anchor="middle">×</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="574" y="80" text-anchor="middle">ACB</text>
+        <line stroke="#3dcd58" fill="none" x1="588" y1="110" x2="650" y2="110" stroke-width="2"></line>
+
+        
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="650" y="88" width="56" height="44"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="678" y="105" text-anchor="middle">UPS</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="678" y="120" text-anchor="middle">2N mod.</text>
+        
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="662" y="146" width="32" height="22"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="678" y="161" text-anchor="middle">BATT</text>
+        <line stroke="#3dcd58" fill="none" x1="678" y1="132" x2="678" y2="146" stroke-width="1.6"></line>
+        <line stroke="#3dcd58" fill="none" x1="706" y1="110" x2="770" y2="110" stroke-width="2"></line>
+
+        
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="770" y="98" width="100" height="24"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="820" y="114" text-anchor="middle">BUSWAY</text>
+        <line stroke="#3dcd58" fill="none" x1="870" y1="110" x2="900" y2="110" stroke-width="2"></line>
+
+        
+        <circle fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" cx="70" cy="310" r="16"></circle>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="70" y="314" text-anchor="middle">~</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="70" y="342" text-anchor="middle">2nd feed</text>
+        <line stroke="#3dcd58" fill="none" x1="86" y1="310" x2="150" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="150" y="296" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="164" y="315" text-anchor="middle">×</text>
+        <line stroke="#3dcd58" fill="none" x1="178" y1="310" x2="216" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="216" y="296" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="230" y="315" text-anchor="middle">×</text>
+        <line stroke="#3dcd58" fill="none" x1="244" y1="310" x2="300" y2="310" stroke-width="2"></line>
+        <circle stroke="#3dcd58" fill="none" cx="322" cy="302" r="14" stroke-width="1.8"></circle>
+        <circle stroke="#3dcd58" fill="none" cx="322" cy="318" r="14" stroke-width="1.8"></circle>
+        <line stroke="#3dcd58" fill="none" x1="344" y1="310" x2="410" y2="310" stroke-width="2"></line>
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="410" y="294" width="46" height="32"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="433" y="314" text-anchor="middle">ATS</text>
+        <line stroke="#3dcd58" fill="none" x1="456" y1="310" x2="520" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="520" y="290" width="14" height="40"></rect>
+        <line stroke="#3dcd58" fill="none" x1="534" y1="310" x2="560" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="560" y="296" width="28" height="28"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="574" y="315" text-anchor="middle">×</text>
+        <line stroke="#3dcd58" fill="none" x1="588" y1="310" x2="650" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="650" y="288" width="56" height="44"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="678" y="305" text-anchor="middle">UPS</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="678" y="320" text-anchor="middle">2N mod.</text>
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="662" y="346" width="32" height="22"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="678" y="361" text-anchor="middle">BATT</text>
+        <line stroke="#3dcd58" fill="none" x1="678" y1="332" x2="678" y2="346" stroke-width="1.6"></line>
+        <line stroke="#3dcd58" fill="none" x1="706" y1="310" x2="770" y2="310" stroke-width="2"></line>
+        <rect fill="#123521" stroke="#3dcd58" stroke-width="1.3" x="770" y="298" width="100" height="24"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3dcd58" font-weight="600" x="820" y="314" text-anchor="middle">BUSWAY</text>
+        <line stroke="#3dcd58" fill="none" x1="870" y1="310" x2="900" y2="310" stroke-width="2"></line>
+
+        
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="404" y="196" width="58" height="30"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="433" y="215" text-anchor="middle">GEN</text>
+        <path stroke="#3dcd58" fill="none" d="M433 196 L433 126" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#a-A65F0B)"></path>
+        <path stroke="#3dcd58" fill="none" d="M433 226 L433 294" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#a-A65F0B)"></path>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="470" y="188">on utility loss</text>
+
+        
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="900" y="150" width="62" height="120" rx="2"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="931" y="196" text-anchor="middle">RACK</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="931" y="212" text-anchor="middle">dual-</text>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="931" y="226" text-anchor="middle">corded</text>
+        <path stroke="#3dcd58" fill="none" d="M900 110 L978 110 L978 150" stroke-width="2"></path>
+        <path stroke="#3dcd58" fill="none" d="M900 310 L978 310 L978 270" stroke-width="2"></path>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#8fa398" x="931" y="288" text-anchor="middle">rPDU ×2</text>
+
+        
+        <path stroke="#3f5c4b" fill="none" d="M164 380 L820 380" stroke-width="1.4" stroke-dasharray="5 4"></path>
+        <g stroke="#3f5c4b" fill="none" stroke-width="1" stroke-dasharray="3 3">
+          <line x1="164" y1="324" x2="164" y2="380"></line>
+          <line x1="322" y1="332" x2="322" y2="380"></line>
+          <line x1="574" y1="324" x2="574" y2="380"></line>
+          <line x1="678" y1="368" x2="678" y2="380"></line>
+          <line x1="820" y1="322" x2="820" y2="380"></line>
+        </g>
+        <rect fill="#0c1a11" stroke="#dce7df" stroke-width="1.3" x="380" y="392" width="240" height="22" rx="3"></rect>
+        <text font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#dce7df" font-weight="600" x="500" y="407" text-anchor="middle">EPMS / DCIM — metering every stage</text>
+        <line stroke="#3f5c4b" fill="none" x1="500" y1="380" x2="500" y2="392" stroke-width="1" stroke-dasharray="3 3"></line>
+      </svg>
