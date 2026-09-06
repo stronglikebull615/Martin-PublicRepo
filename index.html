@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wall Inward — everything between the utility and the chip</title>
-<meta name="description" content="A field manual for the data centre power and cooling chain: eleven figures, fourteen minutes of narration, from the utility connection to the chip.">
+<meta name="description" content="A field manual for the data centre power and cooling chain: fourteen figures, eighteen narrated sections, from the utility connection to the chip.">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="canonical" href="https://stronglikebull615.github.io/Martin-PublicRepo/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Wall Inward">
 <meta property="og:title" content="Wall Inward — everything between the utility and the chip">
-<meta property="og:description" content="Eleven figures, fourteen minutes of narration. The power path, the thermal path, and where the money actually is.">
+<meta property="og:description" content="Fourteen figures, twenty minutes of narration. The power path, the thermal path, commissioning, and where the money actually is.">
 <meta property="og:url" content="https://stronglikebull615.github.io/Martin-PublicRepo/">
 <meta property="og:image" content="https://stronglikebull615.github.io/Martin-PublicRepo/og-preview.png">
 <meta property="og:image:secure_url" content="https://stronglikebull615.github.io/Martin-PublicRepo/og-preview.png">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="Wall Inward — a schematic run of power and cooling stages on a dark green ground">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wall Inward — everything between the utility and the chip">
-<meta name="twitter:description" content="Eleven figures, fourteen minutes of narration.">
+<meta name="twitter:description" content="Fourteen figures, twenty minutes of narration.">
 <meta name="twitter:image" content="https://stronglikebull615.github.io/Martin-PublicRepo/og-preview.png">
 <meta name="theme-color" content="#05100a">
 <script src="./support.js"></script>
@@ -63,12 +63,12 @@ p { margin: 0 0 10px; }
 <header data-narr="0" data-screen-label="Masthead" style="max-width: 1180px; margin: 0 auto; padding: 72px 0 0;">
   <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #3dcd58; margin-bottom: 18px;">Ramp packet · Colocation &amp; Service Providers · Figure set</div>
   <h1 style="font-size: 62px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 22ch;">Wall Inward: <span style="color: #ffffff;">everything between the utility and the chip</span></h1>
-  <p style="font-size: 19px; line-height: 1.55; max-width: 62ch; margin: 0 0 34px; color: #8fa398;">Eleven figures from the field manual, in document order. What the equipment is, what it does, why it costs what it costs, and where a strategic account executive actually changes the outcome.</p>
+  <p style="font-size: 19px; line-height: 1.55; max-width: 62ch; margin: 0 0 34px; color: #8fa398;">Fourteen figures from the field manual, in document order. What the equipment is, what it does, why it costs what it costs, and where a strategic account executive actually changes the outcome.</p>
 
   <sc-if value="{{ narrOn }}" hint-placeholder-val="{{ true }}">
   <div style="display: flex; align-items: center; gap: 14px; margin: 0 0 32px;">
     <button type="button" onClick="{{ play0 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #05100a; background: #3dcd58; border: 0; padding: 12px 18px; cursor: pointer;" style-hover="background: #7fe295;">Play narration from the top</button>
-    <span style="font-size: 13px; color: #5c7367; max-width: 34ch; line-height: 1.45;">Fourteen minutes of narration across fifteen sections. Use the Listen button on any section to jump straight to it.</span>
+    <span style="font-size: 13px; color: #5c7367; max-width: 34ch; line-height: 1.45;">Twenty minutes of narration across eighteen sections. Use the Listen button on any section to jump straight to it.</span>
   </div>
   </sc-if>
 
@@ -488,17 +488,143 @@ p { margin: 0 0 10px; }
 
 <sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
 <div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
-  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part VI · Your ramp</div>
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part VI · Where it gets proven</div>
+  <h2 style="font-size: 38px; margin: 0 0 8px;">Commissioning</h2>
+  <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">The last mile of a data center project, where everything sold upstream either works or doesn't.</p>
+</div>
+</sc-if>
+
+<section data-narr="12" data-screen-label="12 The five levels" style="max-width: 1180px; margin: 56px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">12</div>
+    <h2 style="font-size: 34px; margin: 0;">The five levels</h2>
+    <button type="button" onClick="{{ play12 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 16px;"><strong>Commissioning is the process of proving the building does what the drawings said it would — and it is the only part of the job where your product is tested rather than described.</strong></p>
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">Five levels, running from a factory floor to a fully loaded data hall:</p>
+  </sc-if>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px; overflow-x: auto; margin-bottom: 26px;">
+    <table class="plate">
+      <thead><tr><th>Level</th><th>What happens</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td style="width: 8%;"><b>L1</b></td><td style="width: 76%;">Factory testing and witness. Major equipment — UPS, switchgear, generators, chillers — built and tested before it ships. The customer or their Cx agent attends.</td><td style="width: 16%;">Factory</td></tr>
+        <tr><td style="width: 8%;"><b>L2</b></td><td style="width: 76%;">Delivery and static checks. Equipment arrives, is inspected against the submittal for transit damage and correct build, installed, and verified point to point. Nothing is energized.</td><td style="width: 16%;">Site</td></tr>
+        <tr><td style="width: 8%;"><b>L3</b></td><td style="width: 76%;">Functional testing. Each system energized and run on its own. The UPS transfers to battery, the generator starts and takes load, the breaker trips when it should.</td><td style="width: 16%;">Site</td></tr>
+        <tr><td style="width: 8%;"><b>L4</b></td><td style="width: 76%;">Integrated testing within a discipline. The whole electrical train transfers together. The whole cooling loop runs together. Systems stop being components.</td><td style="width: 16%;">Site</td></tr>
+        <tr><td style="width: 8%;"><b>L5</b></td><td style="width: 76%;"><b>Integrated Systems Test.</b> The entire facility under artificial load from load banks, with utility failure simulated. Everything has to ride through, together, first time.</td><td style="width: 16%;">Site</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;"><strong>L5 is the one that matters.</strong> It is the only test that recreates the actual failure the whole building exists to survive, and it is run in front of everyone — owner, EPC, Cx agent, and every vendor whose equipment is in the chain. A supplier's reputation on a campus is made or lost in that room, and it carries to the next phase and the one after, because Equinix builds to a reference architecture.</p>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="12-commissioning-levels.svg" alt="The five commissioning levels as a ladder from L1 factory testing through L5 integrated systems test, with a divider separating factory work from site work and L1 marked as the only level the supplier fully controls." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;">Read it as a narrowing funnel of control. You own the factory test completely, you participate in the site tests, and by L5 you are one vendor among many in a building that has to work.</figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 22px; padding: 20px 22px; max-width: 78ch; border-left: 2px solid #3dcd58;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Caution · levels are not standardised</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">The five-level structure is the industry norm, but every owner draws the boundaries slightly differently and some split L4 and L5 further. Equinix's own definitions are the ones that count. That is a good early question, and asking it is a better signal than assuming.</p>
+  </div>
+</section>
+
+<section data-narr="13" data-screen-label="13 Tags" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">13</div>
+    <h2 style="font-size: 34px; margin: 0;">Tags, and why they decide whether the last month is calm</h2>
+    <button type="button" onClick="{{ play13 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;"><strong>Every piece of equipment on a site carries a tag, and that tag is the only thread connecting eight documents that are otherwise written by different companies at different times.</strong></p>
+  </sc-if>
+  <div style="margin-bottom: 26px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 14px;">The same tag has to appear, identically, on</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 30px; max-width: 88ch;">
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the submittal and the factory test report</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the one-line and the panel schedule</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the physical label on the asset</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the commissioning script and its signed result</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the BMS point list</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the asset register and the CMMS</div>
+      <div style="font-size: 15px; line-height: 1.5; padding-left: 16px; border-left: 1px solid rgba(61,205,88,0.35);">the warranty record</div>
+    </div>
+  </div>
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 16px;"><strong>If the tag drifts anywhere along that chain, somebody spends weeks reconciling it</strong> — usually in the last month, when there is no time, and usually in front of the owner.</p>
+  <p style="font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 26px;">The unglamorous version of vendor quality is this: your factory paperwork arrives carrying the owner's tag convention rather than your own. Nobody thanks you for it. Everybody notices when it is wrong.</p>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="13-tag-chain.svg" alt="A single equipment tag travelling left to right through eight documents on one continuous line, with the line broken between the fourth and fifth document and the break labelled three weeks." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;">One identifier, eight documents, four companies. The line is only as good as its weakest handoff.</figcaption>
+  </figure>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 22px; padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Why this belongs in a commercial packet</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">It looks like a documentation problem and it is actually a margin problem. Retesting because the paperwork does not match costs schedule, and schedule at this end of a project is the most expensive thing there is. A vendor who gets tags right is quietly cheaper to buy from, and the people who know that are the ones who sign the acceptance certificate.</p>
+  </div>
+</section>
+
+<section data-narr="14" data-screen-label="14 The pressures of Cx" style="max-width: 1180px; margin: 64px auto 0;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">14</div>
+    <h2 style="font-size: 34px; margin: 0;">The pressures of Cx</h2>
+    <button type="button" onClick="{{ play14 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+  </div>
+  <sc-if value="{{ showLead }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width: 66ch; margin-bottom: 26px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;"><strong>Commissioning sits at the end of the schedule, which means it absorbs every delay that happened before it.</strong></p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;">That single structural fact explains most of what is strange about how people behave at this stage. The energization date is fixed. The tenant move-in is fixed, and often contractual. The Cx window is the only elastic thing left, so it is what gets compressed — and it is the one part of the programme that genuinely cannot be rushed, because it is the part that proves the building is safe to occupy.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">Three things follow, and they are worth knowing before you walk into that room.</p>
+  </div>
+  </sc-if>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-bottom: 26px;">
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <h4 style="font-size: 21px; margin: 0 0 8px;">Acceptance and money sit here</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Milestone payments are commonly tied to Cx completion. A Cx delay is not only a schedule problem for the owner, it is a cash problem for everyone in the chain.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <h4 style="font-size: 21px; margin: 0 0 8px;">A failure is not local</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">A failed L5 can force re-test of things that already passed. One vendor's equipment can put an entire integrated test back on the calendar, and everyone in the room watches it happen.</p>
+    </div>
+    <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
+      <h4 style="font-size: 21px; margin: 0 0 8px;">Everyone is present</h4>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Cx is the one phase where the owner, the EPC, the Cx agent, the design engineer and every equipment vendor are in the same building at the same time under pressure. It is the highest-visibility, worst-tempered moment of a project — and it is the best relationship-building opportunity in the entire lifecycle, because behaviour under that pressure is remembered for years.</p>
+    </div>
+  </div>
+  <figure style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 26px 26px 22px;">
+    <div style="background: #08150e; padding: 20px 22px; border: 1px solid rgba(230,239,233,0.07);">
+      <img src="14-cx-compression.svg" alt="A programme bar divided into design, procurement, construction and commissioning, with three upstream delay arrows pushing from the left to compress the commissioning block against a fixed energization line at the right." style="width: 100%; height: auto;">
+    </div>
+    <figcaption style="font-size: 14px; line-height: 1.55; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid rgba(230,239,233,0.14); color: #8fa398; max-width: 88ch;">Every arrow above lands here. Cx is the only elastic block in a programme with a fixed end date, which is why it is always the one under pressure.</figcaption>
+  </figure>
+  <h3 style="font-size: 24px; margin: 34px 0 12px;">Where Schneider actually helps</h3>
+  <div style="max-width: 66ch; margin-bottom: 22px;">
+    <p style="font-size: 17px; line-height: 1.6; margin: 0 0 12px;"><strong>Prefabrication moves commissioning left.</strong> A factory-integrated skid arrives having already completed much of what would otherwise be L1, L2 and part of L3 work, tested in a controlled environment with the right instruments and no weather. That does not just shorten the site programme — it moves testing out of the compressed window and into one where a failure is cheap to fix.</p>
+    <p style="font-size: 17px; line-height: 1.6; margin: 0;">That is a schedule-risk argument rather than a product claim, made to a customer whose real constraint is time.</p>
+  </div>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 20px 22px; max-width: 78ch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">The sentence that does the work</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">"Prefabrication isn't primarily about speed of build. It's about doing your testing somewhere a failure costs a day instead of somewhere it costs a month."</p>
+  </div>
+  <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); margin-top: 22px; padding: 20px 22px; max-width: 78ch; border-left: 2px solid #3dcd58;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Caution · do not oversell participation you have not been offered</div>
+    <p style="font-size: 15px; line-height: 1.6; margin: 0;">Attending a factory witness test is normal. Attending an owner's L5 is a privilege extended by the owner, not a right. Ask; do not assume.</p>
+  </div>
+</section>
+
+<sc-if value="{{ showParts }}" hint-placeholder-val="{{ true }}">
+<div style="max-width: 1180px; margin: 76px auto 0; background: linear-gradient(180deg, rgba(0,158,77,0.12), rgba(5,16,10,0)); border: 1px solid rgba(61,205,88,0.3); color: #e6efe9; padding: 30px 32px;">
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #3dcd58; margin-bottom: 10px;">Part VII · Your ramp</div>
   <h2 style="font-size: 38px; margin: 0 0 8px;">Language, limits and a plan</h2>
   <p style="margin: 0; font-size: 16px; max-width: 62ch; color: #8fa398;">The words you need, the places to stop talking, and how to compress months of learning into weeks.</p>
 </div>
 </sc-if>
 
-<section data-narr="12" data-screen-label="12 Vocabulary" style="max-width: 1180px; margin: 56px auto 0;">
+<section data-narr="15" data-screen-label="15 Vocabulary" style="max-width: 1180px; margin: 56px auto 0;">
   <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">12</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">15</div>
     <h2 style="font-size: 34px; margin: 0;">Vocabulary you actually need</h2>
-    <button type="button" onClick="{{ play12 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+    <button type="button" onClick="{{ play15 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
   </div>
   <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px; overflow-x: auto;">
     <table class="plate">
@@ -532,11 +658,11 @@ p { margin: 0 0 10px; }
   </div>
 </section>
 
-<section data-narr="13" data-screen-label="13 What not to fake" style="max-width: 1180px; margin: 64px auto 0;">
+<section data-narr="16" data-screen-label="16 What not to fake" style="max-width: 1180px; margin: 64px auto 0;">
   <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">13</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">16</div>
     <h2 style="font-size: 34px; margin: 0;">What not to fake</h2>
-    <button type="button" onClick="{{ play13 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+    <button type="button" onClick="{{ play16 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
   </div>
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
     <div>
@@ -563,18 +689,19 @@ p { margin: 0 0 10px; }
   </div>
 </section>
 
-<section data-narr="14" data-screen-label="14 The ramp" style="max-width: 1180px; margin: 64px auto 0;">
+<section data-narr="17" data-screen-label="17 The ramp" style="max-width: 1180px; margin: 64px auto 0;">
   <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;">
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">14</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #3dcd58;">17</div>
     <h2 style="font-size: 34px; margin: 0;">The ramp: 30 / 60 / 90</h2>
-    <button type="button" onClick="{{ play14 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
+    <button type="button" onClick="{{ play17 }}" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; background: transparent; border: 1px solid rgba(61,205,88,0.4); padding: 6px 11px; cursor: pointer; align-self: center;" style-hover="background: rgba(61,205,88,0.14);">Listen</button>
   </div>
   <p style="font-size: 16px; line-height: 1.6; max-width: 66ch; margin: 0 0 24px;">You said you learn by walking data centers and factories rather than in training rooms. Build the ramp around that.</p>
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
     <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
       <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; margin-bottom: 8px;">First 30 days</div>
       <h4 style="font-size: 22px; margin: 0 0 8px;">See it, don't read it</h4>
-      <p style="font-size: 15px; line-height: 1.55; margin: 0;">Two IBX walks minimum, one with an Equinix operations lead rather than a sales counterpart. One Schneider factory — ideally where skids are integrated and factory tested. Sit in on one L4 or L5 commissioning if the calendar allows.</p>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0 0 12px;">Two IBX walks minimum, one with an Equinix operations lead rather than a sales counterpart. One Schneider factory — ideally where skids are integrated and factory tested. Sit in on one L4 or L5 commissioning if the calendar allows.</p>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0;"><strong>Attend a commissioning.</strong> Ask which sites have an integrated systems test scheduled and get into the room for one — ideally an L5, or a factory witness test if that comes sooner. It is the fastest way to understand what the equipment actually has to survive, and the fastest way to meet everyone who matters on a campus in a single day.</p>
     </div>
     <div style="border: 1px solid rgba(230,239,233,0.14); background: rgba(230,239,233,0.02); padding: 18px 20px;">
       <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3dcd58; margin-bottom: 8px;">Days 30–60</div>
@@ -652,21 +779,24 @@ p { margin: 0 0 10px; }
     <div onClick="{{ narrScrub }}" style="position: relative; height: 17px; margin-bottom: 6px; cursor: pointer;">
       <div style="position: absolute; left: 0; right: 0; top: 7px; height: 3px; background: rgba(230,239,233,0.13);"></div>
       <div style="position: absolute; left: 0; top: 7px; height: 3px; background: #3dcd58; width: {{ narrPct }};"></div>
-      <button type="button" onClick="{{ play0 }}" title="Welcome" style="position: absolute; top: 0; bottom: 0; left: 0.20%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play1 }}" title="Section 01" style="position: absolute; top: 0; bottom: 0; left: 5.79%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play2 }}" title="Section 02" style="position: absolute; top: 0; bottom: 0; left: 11.82%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play3 }}" title="Section 03" style="position: absolute; top: 0; bottom: 0; left: 18.50%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play4 }}" title="Section 04" style="position: absolute; top: 0; bottom: 0; left: 25.98%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play5 }}" title="Section 05" style="position: absolute; top: 0; bottom: 0; left: 32.00%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play6 }}" title="Section 06" style="position: absolute; top: 0; bottom: 0; left: 40.09%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play7 }}" title="Section 07" style="position: absolute; top: 0; bottom: 0; left: 45.29%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play8 }}" title="Section 08" style="position: absolute; top: 0; bottom: 0; left: 52.16%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play9 }}" title="Section 09" style="position: absolute; top: 0; bottom: 0; left: 59.21%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play10 }}" title="Section 10" style="position: absolute; top: 0; bottom: 0; left: 65.90%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play11 }}" title="Section 11" style="position: absolute; top: 0; bottom: 0; left: 73.06%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play12 }}" title="Section 12" style="position: absolute; top: 0; bottom: 0; left: 78.25%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play13 }}" title="Section 13" style="position: absolute; top: 0; bottom: 0; left: 83.78%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
-      <button type="button" onClick="{{ play14 }}" title="Section 14" style="position: absolute; top: 0; bottom: 0; left: 91.31%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play0 }}" title="Welcome" style="position: absolute; top: 0; bottom: 0; left: 0.00%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play1 }}" title="Section 01" style="position: absolute; top: 0; bottom: 0; left: 3.81%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play2 }}" title="Section 02" style="position: absolute; top: 0; bottom: 0; left: 7.69%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play3 }}" title="Section 03" style="position: absolute; top: 0; bottom: 0; left: 12.22%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play4 }}" title="Section 04" style="position: absolute; top: 0; bottom: 0; left: 17.59%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play5 }}" title="Section 05" style="position: absolute; top: 0; bottom: 0; left: 21.83%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play6 }}" title="Section 06" style="position: absolute; top: 0; bottom: 0; left: 27.02%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play7 }}" title="Section 07" style="position: absolute; top: 0; bottom: 0; left: 30.59%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play8 }}" title="Section 08" style="position: absolute; top: 0; bottom: 0; left: 35.19%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play9 }}" title="Section 09" style="position: absolute; top: 0; bottom: 0; left: 39.93%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play10 }}" title="Section 10" style="position: absolute; top: 0; bottom: 0; left: 44.43%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play11 }}" title="Section 11" style="position: absolute; top: 0; bottom: 0; left: 49.39%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play12 }}" title="Section 12" style="position: absolute; top: 0; bottom: 0; left: 52.90%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play13 }}" title="Section 13" style="position: absolute; top: 0; bottom: 0; left: 65.19%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play14 }}" title="Section 14" style="position: absolute; top: 0; bottom: 0; left: 72.17%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play15 }}" title="Section 15" style="position: absolute; top: 0; bottom: 0; left: 85.00%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play16 }}" title="Section 16" style="position: absolute; top: 0; bottom: 0; left: 88.92%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
+      <button type="button" onClick="{{ play17 }}" title="Section 17" style="position: absolute; top: 0; bottom: 0; left: 94.53%; width: 11px; margin-left: -5.5px; padding: 0; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(61,205,88,0.16);"><span style="display: block; width: 1.5px; height: 13px; background: rgba(230,239,233,0.34);"></span></button>
     </div>
 
     <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 11px;">
@@ -699,10 +829,10 @@ p { margin: 0 0 10px; }
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;narrOn&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Narration&quot;},&quot;showLead&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showParts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showKeystrip&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
 class Component extends DCLogic {
-  state = { idx: 0, playing: false, rate: 1, supported: true, source: 'audio', time: 2.40, open: true, load: 'idle', loadPct: 0 };
+  state = { idx: 0, playing: false, rate: 1, supported: true, source: 'audio', time: 0, open: true };
 
   script = [
-    { title: 'Welcome — how to use this', text: "Welcome to the wall-inward field manual. If you are new to this business, start here. Everything in a data centre between the utility connection and the chip is what we mean by wall inward, and this packet walks it in eleven figures, in document order. There are only two flows to keep in your head. Electrons come in, and heat goes out. Every piece of equipment you will meet does one of those two jobs. Colour carries that meaning throughout: green is power, cyan is cooling, and anything drawn with a dashed line sits outside our scope. Read it straight through the first time. After that, use it as a reference. Each section has a listen button, so you can come back and hear any single piece again." },
+    { title: 'Welcome — how to use this', text: "Welcome to the wall-inward field manual. If you are new to this business, start here. Everything in a data centre between the utility connection and the chip is what we mean by wall inward, and this packet walks it in fourteen figures, in document order. There are only two flows to keep in your head. Electrons come in, and heat goes out. Every piece of equipment you will meet does one of those two jobs. Colour carries that meaning throughout: green is power, cyan is cooling, and anything drawn with a dashed line sits outside our scope. Read it straight through the first time. After that, use it as a reference. Each section has a listen button, so you can come back and hear any single piece again." },
     { title: '01 · The boundary', text: "Section one, the boundary. The single most useful thing to get right early is where your scope starts and stops. Get this wrong in a meeting and you will either claim something you cannot deliver, or concede something you own. The dashed boxes in the figure are the argument. The utility feed, the generators, the I T equipment, and critically the chilled water plant, all sit outside what this group sells. The plant is the one people get wrong. It is roughly four hundred and fifty thousand dollars per megawatt of real money, it usually sits outside the building envelope, and the financial model excludes it. There are four boundary traps below the figure. Learn them, and agree the boundary early in any commercial conversation." },
     { title: '02 · The one-line', text: "Section two, the one-line diagram. A one-line, sometimes called a single-line, is the drawing every electrical conversation happens over. It collapses three-phase power into a single line and shows the sequence of protection and transformation from source to load. If you learn to read one document in this job, make it this one. Read the figure left to right. Voltage steps down, and the number of paths multiplies. What you are looking at is two complete, independent paths, from two utility feeds, to one dual-corded rack. That is called two N. The generator is the only shared element, and it backs both sides. That separation is the resilience. Below the figure is a stage by stage table. It covers what each box does, what Schneider calls it, and what to listen for when a customer talks about it." },
     { title: '03 · Redundancy', text: "Section three, redundancy. This is the highest-leverage concept in the packet. Topology is the single biggest determinant of how much equipment a megawatt needs, and therefore of what that megawatt is worth. Two facilities with identical I T load can differ by nearly double in electrical content, depending purely on how they are configured. N means exactly what the load requires and nothing more. The figure shows the same two megawatts of I T load, configured three ways. The difference between the left panel and the right is double the U P S, double the battery, double the switchgear and double the distribution, for a customer whose I T load never changed. That is why what topology is the first commercially meaningful question you can ask about any hall. Below, the Uptime tiers in plain terms, and the distinction worth carrying: concurrently maintainable means you survive the planned event, fault tolerant means you survive the unplanned one." },
@@ -714,50 +844,34 @@ class Component extends DCLogic {
     { title: '09 · How a job runs', text: "Section nine, how a job actually runs, and where you intervene. The figure is the lifecycle of a single data centre phase, with the decision points marked. The thing to internalise is this. By the time a specification is issued, the decisions that determine efficiency, topology and vendor have already been made. A request for quote is where you find out whether you won. It is not where you win. The green band on the left is where topology, efficiency targets and reference architecture get decided, and once those are set, the procurement outcome is largely determined. Everything to the right is execution. Note the last box. Commissioning level five, the integrated systems test with load banks, is where a supplier's reputation is made or destroyed. Ask to attend one." },
     { title: '10 · The lead-time gate', text: "Section ten, the lead-time gate. This is the most commercially useful single idea in the packet, and it is the reason a capacity agreement exists at all. For most of this equipment, the order date, not the ground-breaking date, sets the energization date. Lead times on electrical plant now routinely exceed the construction schedule. Read the bars in the figure right to left. Each one starts at the date the order must be placed for the equipment to arrive in time. Transformers set the pace, and the architecture freeze sits ahead of all of them. Here is the sentence that does the work. A campus energizing in twenty twenty-nine needs its transformer order placed in the first quarter of twenty twenty-seven, which means the electrical architecture has to be settled during twenty twenty-six. One caution: lead-time figures move every quarter. Confirm current numbers with your supply chain team before you quote any." },
     { title: '11 · Route to market', text: "Section eleven, who buys, and through which door. Two structural facts. First, roughly forty-five per cent of what a large colocation customer specifies is bought by someone else, an engineering procurement and construction firm, or a contractor, even when the customer chose the product. Second, no single person owns the decision. Knowing who owns the no is worth more than knowing who owns the budget. The fifty-five forty-five split matters because nearly half your revenue arrives through a party you do not contract with. That means the E P C relationship is a real channel, not an afterthought, and being specified is worth as much as being bought." },
-    { title: '12 · Vocabulary', text: "Section twelve, vocabulary. The table below is the language you need, rather than everything that exists. It is deliberately short. Learn the terms, and most technical conversations become navigable. A handful carry more weight than the rest. Critical I T load is the unit everything is priced against, so keep it distinct from gross facility load, which includes cooling. P U E is the efficiency scoreboard, total facility power divided by I T power. N, N plus one and two N set the equipment count, so they set the deal size. And basis of design is the document that fixes topology, efficiency targets and architecture. That is the document you must influence." },
-    { title: '13 · What not to fake', text: "Section thirteen, what not to fake. If you are new to power and cooling, do not act as though you know it all. Used deliberately, that is the most credible thing you can do in a room of engineers. Here is the line. Everything in this packet is yours to use. What the equipment does, why topology drives cost, why lead time drives schedule, where the money sits, how a project runs. That is business literacy, and you should sound fluent. Stop, every time, at sizing or specifying an actual piece of equipment, at protection coordination and fault calculations, at whether a topology meets a given tier, at thermal modelling for a real hall, and at current lead times and product configurations. The move that works is simple. Say: I know enough to know that is the right question, and not enough to answer it well. Let me bring the engineer who owns it, and I would like to be in that conversation. Nobody has lost a deal by saying that. Plenty have lost deals by guessing." },
-    { title: '14 · The ramp', text: "Section fourteen, the ramp. If you learn by walking data centres and factories rather than sitting in training rooms, build your first ninety days around that. In the first thirty days, see it rather than read it. Two site walks minimum, one with an operations lead rather than a sales counterpart. One factory, ideally where skids are integrated and factory tested. Sit in on a commissioning test if the calendar allows. Days thirty to sixty, build the internal bench. Name your sales engineer, your services lead, your supply chain contact and your regional counterparts. Get the real lead-time table. Days sixty to ninety, convert it into a position. Rewrite the account plan on internal data, take a point of view on the reference design, and have the design engagement conversation rather than the request for quote conversation. Below are eight questions to carry onto a site walk. Ask them of the operator, not the salesperson. The best one on the list is: which piece of equipment here gives you the most trouble." }
+    { title: '12 · The five levels', text: "Section twelve, the five levels. Commissioning is the process of proving the building does what the drawings said it would, and it is the only part of the job where your product is tested rather than described. There are five levels, running from a factory floor to a fully loaded data hall. Level one is factory testing and witness: the major equipment, U.P.S., switchgear, generators, chillers, built and tested before it ships, with the customer or their commissioning agent attending. Level two is delivery and static checks. Equipment arrives, is inspected against the submittal for transit damage and correct build, installed, and verified point to point. Nothing is energized. Level three is functional testing: each system energized and run on its own. The U.P.S. transfers to battery, the generator starts and takes load, the breaker trips when it should. Level four is integrated testing within a discipline. The whole electrical train transfers together, the whole cooling loop runs together, and systems stop being components. Level five is the integrated systems test: the entire facility under artificial load from load banks, with utility failure simulated. Everything has to ride through, together, first time. Level five is the one that matters. It is the only test that recreates the actual failure the whole building exists to survive, and it is run in front of everyone, owner, E.P.C., commissioning agent, and every vendor whose equipment is in the chain. A supplier's reputation on a campus is made or lost in that room, and it carries to the next phase and the one after, because Equinix builds to a reference architecture. Read the figure as a narrowing funnel of control. You own the factory test completely, you participate in the site tests, and by level five you are one vendor among many in a building that has to work. One caution. The five-level structure is the industry norm, but every owner draws the boundaries slightly differently and some split four and five further. Equinix's own definitions are the ones that count, and asking which they use is a better signal than assuming." },
+    { title: '13 · Tags', text: "Section thirteen, tags, and why they decide whether the last month is calm. Every piece of equipment on a site carries a tag, and that tag is the only thread connecting eight documents that are otherwise written by different companies at different times. The same tag has to appear, identically, on the submittal and the factory test report, on the one-line and the panel schedule, on the physical label on the asset, on the commissioning script and its signed result, on the B.M.S. point list, on the asset register and the maintenance system, and on the warranty record. If the tag drifts anywhere along that chain, somebody spends weeks reconciling it, usually in the last month when there is no time, and usually in front of the owner. The unglamorous version of vendor quality is this: your factory paperwork arrives carrying the owner's tag convention rather than your own. Nobody thanks you for it. Everybody notices when it is wrong. Here is why this belongs in a commercial packet. It looks like a documentation problem and it is actually a margin problem. Retesting because the paperwork does not match costs schedule, and schedule at this end of a project is the most expensive thing there is. A vendor who gets tags right is quietly cheaper to buy from, and the people who know that are the ones who sign the acceptance certificate." },
+    { title: '14 · The pressures of Cx', text: "Section fourteen, the pressures of commissioning. Commissioning sits at the end of the schedule, which means it absorbs every delay that happened before it. That single structural fact explains most of what is strange about how people behave at this stage. The energization date is fixed. The tenant move-in is fixed, and often contractual. The commissioning window is the only elastic thing left, so it is what gets compressed, and it is the one part of the programme that genuinely cannot be rushed, because it is the part that proves the building is safe to occupy. Three things follow, and they are worth knowing before you walk into that room. First, acceptance and money sit here. Milestone payments are commonly tied to commissioning completion, so a delay is not only a schedule problem for the owner, it is a cash problem for everyone in the chain. Second, a failure is not local. A failed level five can force re-test of things that already passed. One vendor's equipment can put an entire integrated test back on the calendar, and everyone in the room watches it happen. Third, everyone is present. Commissioning is the one phase where the owner, the E.P.C., the commissioning agent, the design engineer and every equipment vendor are in the same building at the same time under pressure. It is the highest-visibility, worst-tempered moment of a project, and it is the best relationship-building opportunity in the entire lifecycle, because behaviour under that pressure is remembered for years. So where does Schneider actually help? Prefabrication moves commissioning left. A factory-integrated skid arrives having already completed much of what would otherwise be level one, level two and part of level three work, tested in a controlled environment with the right instruments and no weather. That does not just shorten the site programme, it moves testing out of the compressed window and into one where a failure is cheap to fix. That is a schedule-risk argument rather than a product claim, made to a customer whose real constraint is time. Here is the sentence that does the work. Prefabrication isn't primarily about speed of build. It's about doing your testing somewhere a failure costs a day instead of somewhere it costs a month. One caution: do not oversell participation you have not been offered. Attending a factory witness test is normal. Attending an owner's level five is a privilege extended by the owner, not a right. Ask; do not assume." },
+    { title: '15 · Vocabulary', text: "Section fifteen, vocabulary. The table below is the language you need, rather than everything that exists. It is deliberately short. Learn the terms, and most technical conversations become navigable. A handful carry more weight than the rest. Critical I T load is the unit everything is priced against, so keep it distinct from gross facility load, which includes cooling. P U E is the efficiency scoreboard, total facility power divided by I T power. N, N plus one and two N set the equipment count, so they set the deal size. And basis of design is the document that fixes topology, efficiency targets and architecture. That is the document you must influence." },
+    { title: '16 · What not to fake', text: "Section sixteen, what not to fake. If you are new to power and cooling, do not act as though you know it all. Used deliberately, that is the most credible thing you can do in a room of engineers. Here is the line. Everything in this packet is yours to use. What the equipment does, why topology drives cost, why lead time drives schedule, where the money sits, how a project runs. That is business literacy, and you should sound fluent. Stop, every time, at sizing or specifying an actual piece of equipment, at protection coordination and fault calculations, at whether a topology meets a given tier, at thermal modelling for a real hall, and at current lead times and product configurations. The move that works is simple. Say: I know enough to know that is the right question, and not enough to answer it well. Let me bring the engineer who owns it, and I would like to be in that conversation. Nobody has lost a deal by saying that. Plenty have lost deals by guessing." },
+    { title: '17 · The ramp', text: "Section seventeen, the ramp. If you learn by walking data centres and factories rather than sitting in training rooms, build your first ninety days around that. In the first thirty days, see it rather than read it. Two site walks minimum, one with an operations lead rather than a sales counterpart. One factory, ideally where skids are integrated and factory tested. Sit in on a commissioning test if the calendar allows. Days thirty to sixty, build the internal bench. Name your sales engineer, your services lead, your supply chain contact and your regional counterparts. Get the real lead-time table. Days sixty to ninety, convert it into a position. Rewrite the account plan on internal data, take a point of view on the reference design, and have the design engagement conversation rather than the request for quote conversation. Below are eight questions to carry onto a site walk. Ask them of the operator, not the salesperson. The best one on the list is: which piece of equipment here gives you the most trouble." }
   ];
 
   componentDidMount() {
     this.tts = typeof window !== 'undefined' && 'speechSynthesis' in window;
     if (this.tts) window.speechSynthesis.getVoices();
     if (!this.tts) this.setState({ supported: false });
-    if (window.__wiNarration) { try { window.__wiNarration.pause(); } catch (e) {} }
+    this.silenceAll(null);
     this.ensureAudio();
-    this.loadRecording();
-    // The live instance polls the shared element rather than relying on a
-    // handler bound during some earlier mount — that binding is what silently
-    // froze the clock and the figures.
-    this._loop = setInterval(() => this.tick(), 180);
     if (typeof window !== 'undefined' && window.innerWidth < 1100) this.setState({ open: false });
+    this._loop = setInterval(() => this.tick(), 180);
     this._stop = () => {
       if (this.tts) window.speechSynthesis.cancel();
-      if (window.__wiNarration) { try { window.__wiNarration.pause(); } catch (e) {} }
+      this.silenceAll(null);
     };
     window.addEventListener('beforeunload', this._stop);
-  }
-
-  tick() {
-    if (this._dead || this.state.source !== 'audio') return;
-    const a = window.__wiNarration;
-    if (!a || !isFinite(a.currentTime)) return;
-    const t = a.currentTime, playing = !a.paused && !a.ended;
-    const i = this.indexAt(t);
-    const patch = {};
-    if (Math.abs(t - this.state.time) > 0.05) patch.time = t;
-    if (i !== this.state.idx) patch.idx = i;
-    if (playing !== this.state.playing) patch.playing = playing;
-    if (!Object.keys(patch).length) return;
-    const moved = patch.idx != null;
-    this.setState(patch, () => { if (moved && playing) this.focus(i); });
   }
 
   componentWillUnmount() {
     this._dead = true;
     if (this._loop) clearInterval(this._loop);
     this._seq = (this._seq || 0) + 1;
-    this.stopAudio();
+    this.silenceAll(null);
     if (this._stop) window.removeEventListener('beforeunload', this._stop);
   }
 
@@ -775,104 +889,51 @@ class Component extends DCLogic {
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
-  // One continuous recording. Marks set from a listen-through pass.
-  track = {
-    src: 'narration.mp3',
-    end: 828.0,
-    marks: [1.68, 47.96, 97.83, 153.17, 215.12, 264.92, 331.93, 374.98,
-            431.87, 490.20, 545.62, 604.93, 647.85, 693.64, 755.98]
-  };
+  // One recording per section. Boundaries are exact by construction — no marks,
+  // no waveform alignment, and no seeking needed to start a section.
+  durations = [46.24, 47.18, 54.99, 65.28, 51.54, 62.96, 43.36, 55.95, 57.52, 54.65, 60.26, 42.66, 149.29, 84.74, 155.85, 47.65, 68.13, 66.46];
 
-  // Streaming MP3 over a host that ignores byte-range requests is NOT seekable:
-  // every currentTime assignment snaps back to zero. Pulling the file down once
-  // and handing the element a blob URL makes it seekable everywhere, including
-  // offline and from a local file.
-  // The element, the blob and the in-flight fetch all live on window, so a
-  // remount adopts them instead of starting a second player over the first.
-  async loadRecording() {
-    if (window.__wiBlob) { this.adoptBlob(window.__wiBlob); return; }
-    if (window.__wiLoad) {
-      this.setState({ load: 'loading', loadPct: this.state.loadPct });
-      try { const url = await window.__wiLoad; if (!this._dead) this.adoptBlob(url); }
-      catch (e) { if (!this._dead) this.setState({ load: 'failed' }); }
-      return;
-    }
-    this.setState({ load: 'loading', loadPct: 0 });
-    window.__wiLoad = (async () => {
-      const res = await fetch(this.track.src);
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const total = Number(res.headers.get('content-length') || 0);
-      let blob;
-      if (total && res.body && res.body.getReader) {
-        const reader = res.body.getReader();
-        const chunks = [];
-        let got = 0, shown = 0;
-        for (;;) {
-          const r = await reader.read();
-          if (r.done) break;
-          chunks.push(r.value);
-          got += r.value.length;
-          const pct = Math.floor(got / total * 100);
-          if (pct >= shown + 2) { shown = pct; if (!this._dead) this.setState({ loadPct: pct }); }
-        }
-        blob = new Blob(chunks, { type: res.headers.get('content-type') || 'audio/mpeg' });
-      } else {
-        blob = await res.blob();
-      }
-      const url = URL.createObjectURL(blob);
-      window.__wiBlob = url;
-      return url;
-    })();
-    try { const url = await window.__wiLoad; if (!this._dead) this.adoptBlob(url); }
-    catch (e) { window.__wiLoad = null; if (!this._dead) this.setState({ load: 'failed' }); }
-  }
+  // ElevenLabs' own export filenames, so the eighteen files upload straight
+  // from the download folder with no renaming.
+  files = [
+    'Welcome_to_the_wall_inward_fie.mp3',
+    'Section_one__the_boundary__The.mp3',
+    'Section_two__the_one_line_diag.mp3',
+    'Section_three__redundancy__Thi.mp3',
+    'Section_four__the_two_cooling_.mp3',
+    'Section_five__what_a_C_D_U__ac.mp3',
+    'Section_six__the_density_ladde.mp3',
+    'Section_seven__prefabrication_.mp3',
+    'Section_eight__the_money_map__.mp3',
+    'Section_nine__how_a_job_actual.mp3',
+    'Section_ten__the_lead_time_gat.mp3',
+    'Section_eleven__who_buys__and_.mp3',
+    'Section_twelve__the_five_level.mp3',
+    'Section_thirteen__tags__and_wh%20(2).mp3',
+    'Section_fourteen__the_pressure.mp3',
+    'Section_fifteen__vocabulary__T.mp3',
+    'Section_sixteen__what_not_to_f.mp3',
+    'Section_seventeen__the_ramp__I.mp3'
+  ];
 
-  adoptBlob(url) {
-    this._blobUrl = url;
-    const a = this.ensureAudio();
-    const at = a.currentTime, wasPlaying = !a.paused;
-    if (a.src !== url) { a.src = url; a.load(); }
-    this.setState({ load: 'ready', loadPct: 100 });
-    const want = this._pendingIdx;
-    this._pendingIdx = null;
-    if (want != null) { this.play(want, true); return; }
-    if (this.state.playing || wasPlaying) {
-      const i = this.state.idx;
-      this.startAt(a, Math.max(at, this.track.marks[i]), i);
-    }
-  }
+  src(i) { return 'audio/' + this.files[i]; }
 
-  seekable() {
-    const a = this._audio;
-    if (!a) return false;
-    try { return a.seekable && a.seekable.length > 0 && a.seekable.end(0) > 1; }
-    catch (e) { return false; }
-  }
+  total() { return this.durations.reduce((n, d) => n + d, 0); }
 
-  // Every element ever created is registered here. new Audio() elements are not
-  // in the DOM, so a stale one from a previous mount is otherwise unreachable —
-  // this is what makes a second voice over the first impossible.
-  silenceAll(keep) {
-    const reg = window.__wiAll || [];
-    for (const el of reg) {
-      if (el === keep) continue;
-      try { el.pause(); el.ontimeupdate = null; el.onended = null; el.onerror = null; } catch (e) {}
-    }
-    if (this.tts && typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
-  }
-
-  stopAudio() { this.silenceAll(null); }
-
-  // Position is the single source of truth for the current section, so any seek
-  // self-corrects instead of being tracked separately.
-  sectionEnd(i) {
-    return i + 1 < this.track.marks.length ? this.track.marks[i + 1] : this.track.end;
+  // Offset of section i within the whole runtime — for the clock and scrub bar.
+  offset(i) {
+    let t = 0;
+    for (let k = 0; k < i; k++) t += this.durations[k];
+    return t;
   }
 
   indexAt(t) {
-    const m = this.track.marks;
-    for (let i = m.length - 1; i >= 0; i--) if (t >= m[i] - 0.02) return i;
-    return 0;
+    let acc = 0;
+    for (let i = 0; i < this.durations.length; i++) {
+      acc += this.durations[i];
+      if (t < acc) return i;
+    }
+    return this.durations.length - 1;
   }
 
   fmt(t) {
@@ -880,104 +941,107 @@ class Component extends DCLogic {
     return Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
   }
 
+  // Every element ever created is registered here. new Audio() elements are not
+  // in the DOM, so a stale one from a previous mount is otherwise unreachable —
+  // this is what makes a second voice over the first impossible.
+  silenceAll(keep) {
+    for (const el of (window.__wiAll || [])) {
+      if (el === keep) continue;
+      try { el.pause(); } catch (e) {}
+    }
+    if (this.tts && typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+  }
+
   ensureAudio() {
     let a = window.__wiNarration;
     if (!a) {
-      a = new Audio(window.__wiBlob || this.track.src);
+      a = new Audio();
       a.preload = 'metadata';
       window.__wiNarration = a;
       window.__wiAll = (window.__wiAll || []).concat(a);
     }
-    this.silenceAll(a);
-    // Adopting: these assignments replace any previous instance's handlers, so
-    // a stale component can no longer drive this element.
-    a.onerror = () => { if (this.state.load !== 'loading') this.setState({ load: 'failed' }); };
-    a.onended = () => this.halt();
-    a.ontimeupdate = () => {
-      if (this._dead || this.state.source !== 'audio') return;
-      const t = a.currentTime, now = Date.now();
-      const i = this.indexAt(t);
-      if (i !== this.state.idx) {
-        this._tick = now;
-        this.setState({ idx: i, time: t });
-        if (this.state.playing) this.focus(i);
-        return;
-      }
-      if (now - (this._tick || 0) > 240) { this._tick = now; this.setState({ time: t }); }
-    };
-    this._audio = a;
+    if (this._audio !== a) {
+      // Adopting: these assignments replace any previous instance's handlers.
+      a.onended = () => this.advance();
+      a.onerror = () => { this._failed = true; this.setState({ source: 'voice' }); };
+      this._audio = a;
+    }
     return a;
   }
 
-  startAt(a, t, i) {
-    this._seq = (this._seq || 0) + 1;
-    const seq = this._seq;
-    const go = () => {
-      if (this._dead || seq !== this._seq) return;
-      this.silenceAll(a);
-      a.playbackRate = this.state.rate;
-      try { a.currentTime = t; } catch (e) {}
-      const p = a.play();
-      if (p && p.catch) p.catch(() => this.setState({ playing: false }));
-    };
-    if (a.readyState >= 1) go();
-    else a.addEventListener('loadedmetadata', go, { once: true });
+  advance() {
+    if (this._dead || this._cancelled) return;
+    const next = this.state.idx + 1;
+    if (next < this.script.length) this.play(next, true);
+    else this.setState({ playing: false });
   }
 
   play(i, scroll) {
     if (!this.script[i]) return;
     this._cancelled = false;
-    this.setState({ idx: i, playing: true, time: this.track.marks[i] });
+    this._seq = (this._seq || 0) + 1;
+    const seq = this._seq;
+    this.setState({ idx: i, playing: true, time: this.offset(i) });
     if (scroll) this.focus(i);
+    if (this._failed) { this.speakTTS(i); return; }
 
-    const needsSeek = i > 0;
-    if (this.state.load === 'failed' && !this.seekable() && needsSeek) {
-      this.speakTTS(i);
-      return;
-    }
-    // Recording still downloading: remember the ask and honour it on arrival.
-    if (needsSeek && !window.__wiBlob && this.state.load !== 'failed') {
-      this._pendingIdx = i;
-      this.stopAudio();
-      return;
-    }
     const a = this.ensureAudio();
     this.silenceAll(a);
+    const want = this.src(i);
+    if (!a.src || a.src.indexOf(want) < 0) { a.src = want; a.load(); }
+    else if (a.currentTime > 0.05) { try { a.currentTime = 0; } catch (e) {} }
+    a.playbackRate = this.state.rate;
     this.setState({ source: 'audio' });
-    this.startAt(a, this.track.marks[i], i);
+    const p = a.play();
+    if (p && p.catch) p.catch(() => {
+      if (seq !== this._seq) return;
+      if (this._failed) this.speakTTS(i);
+      else this.setState({ playing: false });   // autoplay policy — recoverable
+    });
   }
 
+  // Picks up mid-section instead of restarting it.
   resume() {
     const i = this.state.idx;
+    if (this._failed) { this.play(i, true); return; }
     const a = this.ensureAudio();
+    if (!a.src || a.src.indexOf(this.src(i)) < 0) { this.play(i, true); return; }
     this._cancelled = false;
     this.silenceAll(a);
-    this.setState({ playing: true, source: 'audio' });
-    if (a.readyState < 1 || a.currentTime < this.track.marks[0] - 0.5) {
-      this.play(i, true);
-      return;
-    }
-    this.silenceAll(a);
     a.playbackRate = this.state.rate;
+    this.setState({ playing: true, source: 'audio' });
     const p = a.play();
     if (p && p.catch) p.catch(() => this.setState({ playing: false }));
   }
 
   scrubTo(frac) {
-    const t = Math.max(0, Math.min(this.track.end - 0.5, frac * this.track.end));
+    const t = Math.max(0, Math.min(this.total() - 0.5, frac * this.total()));
     const i = this.indexAt(t);
-    if (!window.__wiBlob && !this.seekable()) { this.play(i, true); return; }
+    const within = Math.max(0, t - this.offset(i));
+    if (this._failed) { this.jump(i); return; }
     const a = this.ensureAudio();
+    this._cancelled = false;
+    this._seq = (this._seq || 0) + 1;
+    const seq = this._seq;
+    const wasPlaying = this.state.playing;
+    this.silenceAll(a);
     this.setState({ idx: i, time: t, source: 'audio' });
     this.focus(i);
-    if (this.state.playing) this.startAt(a, t, i);
-    else { try { a.currentTime = t; } catch (e) {} }
+    const want = this.src(i);
+    const seek = () => {
+      if (this._dead || seq !== this._seq) return;
+      try { a.currentTime = within; } catch (e) {}
+      if (wasPlaying) { a.playbackRate = this.state.rate; a.play(); }
+    };
+    if (!a.src || a.src.indexOf(want) < 0) {
+      a.src = want;
+      a.load();
+      a.addEventListener('loadedmetadata', seek, { once: true });
+    } else seek();
   }
 
   speakTTS(i) {
     if (!this.tts) { this.setState({ playing: false }); return; }
-    // Only ever the fallback: if the recording loaded, it owns playback.
-    if (window.__wiBlob) { this.play(i, false); return; }
     this.silenceAll(null);
     this.setState({ source: 'voice' });
     window.speechSynthesis.cancel();
@@ -987,7 +1051,7 @@ class Component extends DCLogic {
     const v = this.pickVoice();
     if (v) { u.voice = v; u.lang = v.lang; }
     u.onend = () => {
-      if (this._cancelled) return;
+      if (this._dead || this._cancelled) return;
       const next = i + 1;
       if (next < this.script.length) this.play(next, true);
       else this.setState({ playing: false });
@@ -998,7 +1062,6 @@ class Component extends DCLogic {
   halt() {
     this._cancelled = true;
     this._seq = (this._seq || 0) + 1;
-    this._pendingIdx = null;
     this.silenceAll(null);
     this.setState({ playing: false });
   }
@@ -1006,28 +1069,29 @@ class Component extends DCLogic {
   jump(i) {
     this._cancelled = true;
     this._seq = (this._seq || 0) + 1;
-    this._pendingIdx = null;
     this.silenceAll(null);
     const seq = this._seq;
-    setTimeout(() => { if (seq === this._seq) this.play(i, true); }, 30);
+    setTimeout(() => { if (!this._dead && seq === this._seq) this.play(i, true); }, 30);
+  }
+
+  // The live instance polls the shared element rather than relying on a handler
+  // bound during some earlier mount.
+  tick() {
+    if (this._dead || this.state.source !== 'audio') return;
+    const a = window.__wiNarration;
+    if (!a || !a.src || !isFinite(a.currentTime)) return;
+    const playing = !a.paused && !a.ended;
+    const t = this.offset(this.state.idx) + a.currentTime;
+    const patch = {};
+    if (Math.abs(t - this.state.time) > 0.05) patch.time = t;
+    if (playing !== this.state.playing) patch.playing = playing;
+    if (Object.keys(patch).length) this.setState(patch);
   }
 
   renderVals() {
-    const { idx, playing, rate, source, time, open, load, loadPct } = this.state;
+    const { idx, playing, rate, source, time, open } = this.state;
     const rateLabels = { 0.85: '0.85×', 1: '1×', 1.15: '1.15×', 1.3: '1.3×' };
-    const waiting = this._pendingIdx != null;
-    let foot;
-    if (load === 'loading' && loadPct < 100) {
-      foot = waiting
-        ? 'Loading the recording · ' + loadPct + '% — starts when ready.'
-        : 'Loading the recording · ' + loadPct + '%';
-    } else if (source === 'voice') {
-      foot = this.tts
-        ? 'Recording unavailable — using your browser voice.'
-        : 'Try Chrome, Edge or Safari for spoken narration.';
-    } else {
-      foot = 'Recorded narration · click the ticks to jump.';
-    }
+    const total = this.total();
     const vals = {
       showLead: this.props.showLead ?? true,
       showParts: this.props.showParts ?? true,
@@ -1037,14 +1101,18 @@ class Component extends DCLogic {
       narrShut: open === false,
       narrCounter: (idx + 1) + ' / ' + this.script.length,
       narrTitle: this.script[idx].title,
-      narrPlayLabel: waiting ? 'Loading' : (playing ? 'Pause' : (time > this.track.marks[0] + 1 ? 'Resume' : 'Play')),
+      narrPlayLabel: playing ? 'Pause' : (time > this.offset(idx) + 1 ? 'Resume' : 'Play'),
       narrRateLabel: rateLabels[rate] || rate + '×',
-      narrPct: (Math.max(0, Math.min(1, time / this.track.end)) * 100).toFixed(2) + '%',
-      narrClock: this.fmt(time) + ' / ' + this.fmt(this.track.end),
+      narrPct: (Math.max(0, Math.min(1, time / total)) * 100).toFixed(2) + '%',
+      narrClock: this.fmt(time) + ' / ' + this.fmt(total),
       narrPrevOp: idx === 0 ? '0.3' : '1',
       narrNextOp: idx === this.script.length - 1 ? '0.3' : '1',
-      narrFoot: foot,
-      narrToggle: () => { if (playing || waiting) this.halt(); else this.resume(); },
+      narrFoot: source === 'audio'
+        ? 'Recorded narration · click the ticks to jump.'
+        : (this.tts
+            ? 'Recording unavailable — using your browser voice.'
+            : 'Try Chrome, Edge or Safari for spoken narration.'),
+      narrToggle: () => { if (playing) this.halt(); else this.resume(); },
       narrPrev: () => { if (idx > 0) this.jump(idx - 1); },
       narrNext: () => { if (idx < this.script.length - 1) this.jump(idx + 1); },
       narrFold: () => this.setState({ open: open === false }),
@@ -1067,6 +1135,7 @@ class Component extends DCLogic {
     }
     return vals;
   }
+
 }
 </script>
 </body>
